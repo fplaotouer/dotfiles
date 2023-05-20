@@ -1,0 +1,34 @@
+# Journal Declarations
+
+; # Commodities Declarations
+;
+; default commodity
+commodity 1,000.00 CNY
+D 1,000.00 CNY
+
+; # Accounts Declarations
+;
+; ## Top-level Accounts
+; The account type should be one of the five main account types:
+;     A or Asset (things you own)
+;     L or Liability (things you owe)
+;     E or Equity (investment/ownership; balanced counterpart of assets & liabilities)
+;     R or Revenue (what you received money from, AKA income; technically part of Equity)
+;     X or Expense (what you spend money on; technically part of Equity)
+account assets             ; type: Asset
+account liabilities        ; type: Liability
+account equity             ; type: Equity
+account revenues           ; type: Revenue
+account expenses           ; type: Expense
+; or, it can be (these are used less often):
+;     C or Cash (a subtype of Asset, indicating liquid assets for the cashflow report)
+;     V or Conversion (a subtype of Equity, for conversions (see COST).)
+account assets:bank        ; type: Cash
+account assets:cash        ; type: Cash
+account equity:conversion  ; type: Conversion
+
+; ## Basic Accounts
+account assets:receivables
+account liabilities:payables
+account liabilities:creditcard
+account equity:opening/closing balances
