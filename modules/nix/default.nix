@@ -6,7 +6,7 @@
 }: {
   # Nix configurations shared among NixOS, home-manager and nix-darwin
   nix = {
-    package = pkgs.nixVersions.stable;
+    package = lib.mkDefault pkgs.nixVersions.stable;
     settings = {
       experimental-features = "nix-command flakes";
       trusted-users = ["root" "pangz"];

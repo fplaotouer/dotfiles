@@ -13,6 +13,7 @@
     baseIndex = 1;
     reverseSplit = true;
     customPaneNavigationAndResize = true;
+    tmuxinator.enable = true;
     plugins = with pkgs.tmuxPlugins; [
       cpu
       sensible

@@ -19,6 +19,7 @@
     ssh.enable = true;
     git.enable = true;
     gpg.enable = true;
+    password-store.enable = true;
     home-manager.enable = true;
   };
 
