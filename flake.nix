@@ -66,6 +66,30 @@
         };
       };
 
+      darwinConfigurations.pangz = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [
+          ./modules
+          ./modules/darwin
+          ./modules/users/pangz
+          ./hosts/pangz/configuration.nix
+          home-manager.darwinModule
+          sops-nix.nixosModules.sops
+          {
+            home-manager.users.pangz = {
+              imports = [./hosts/pangz/home.nix];
+            };
+            nixpkgs.overlays = builtins.attrValues self.overlays;
+            nix = {
+              registry.n.flake = self;
+              nixPath = [
+                {nixpkgs = nixpkgs;}
+              ];
+            };
+          }
+        ];
+      };
+
       homeConfigurations = {
         server-pangz = let
           system = "x86_64-linux";

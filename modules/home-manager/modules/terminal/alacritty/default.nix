@@ -91,9 +91,6 @@
         program = "${pkgs.fish}/bin/fish";
         args = [
           "--login"
-          "-c"
-          # "zellij --layout compact attach --index 0 --create"
-          "tmux attach || tmux"
         ];
       };
       mouse = {

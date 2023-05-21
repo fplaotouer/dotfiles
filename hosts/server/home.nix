@@ -14,6 +14,7 @@
     fd.enable = true;
     exa.enable = true;
     xplr.enable = true;
+    usql.enable = true;
     just-cli.enable = true;
     icdiff.enable = true;
     zoxide.enable = true;
