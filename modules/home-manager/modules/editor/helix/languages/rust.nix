@@ -4,8 +4,8 @@
   pkgs,
   ...
 }: {
-  programs.helix.languages = [
-    {
+  programs.helix.languages = {
+    rust = {
       name = "rust";
       config = {
         cargo.allFeatures = true;
@@ -19,6 +19,6 @@
           closureReturnTypeHints = true;
         };
       };
-    }
-  ];
+    };
+  };
 }

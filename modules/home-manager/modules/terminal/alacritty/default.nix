@@ -37,6 +37,7 @@
         bold_italic.style = "Bold Italic";
       };
       colors = {
+        transparent_background_colors = true;
         primary = {
           background = "#1d2021";
           foreground = "#d5c4a1";
@@ -91,6 +92,9 @@
         program = "${pkgs.fish}/bin/fish";
         args = [
           "--login"
+          "-c"
+          # "zellij --layout compact attach --index 0 --create"
+          "tmux attach || tmux"
         ];
       };
       mouse = {

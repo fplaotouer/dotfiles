@@ -8,6 +8,7 @@
     inherit
       (pkgs)
       marksman
+      shellcheck
       sumneko-lua-language-server
       nil
       ;

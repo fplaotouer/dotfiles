@@ -5,13 +5,14 @@
 
 ;; Use no-littering to automatically set common paths to the new user-emacs-directory
 (use-package no-littering
-  :ensure t)
-(setq auto-save-file-name-transforms
-      `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+  :ensure t
+  :config
+  (setq auto-save-file-name-transforms `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+  )
 
-(load-theme 'gruvbox-dark-medium t)
 (use-package all-the-icons
   :if (display-graphic-p))
+(load-theme 'gruvbox-dark-medium t)
 
 ;; Enable Evil
 (use-package evil
@@ -117,7 +118,6 @@
   (flycheck-mode . flycheck-rust-setup)
   (flycheck-mode . flycheck-inline-mode)
   )
-
 (use-package flycheck-hledger
   :after (flycheck ledger-mode)
   :demand t)
@@ -129,7 +129,6 @@
   :hook (flycheck-mode . sideline-mode)
   :init
   (setq sideline-backends-right '(sideline-flycheck)))
-
 (use-package sideline-flycheck :hook (flycheck-mode . sideline-flycheck-setup))
 
 (use-package dirvish
@@ -158,6 +157,10 @@
   :ensure nix-mode
   :commands (nix-repl))
 
+(use-package flymake-shellcheck
+  :commands flymake-shellcheck-load
+  :init
+  (add-hook 'sh-mode-hook 'flymake-shellcheck-load))
 
 (use-package ivy
   :diminish
@@ -176,12 +179,10 @@
          ("C-d" . ivy-reverse-i-search-kill))
   :config
   (ivy-mode 1))
-
 (use-package ivy-rich
   :after ivy
   :init
   (ivy-rich-mode 1))
-
 (use-package counsel
   :bind (("C-M-j" . 'counsel-switch-buffer)
          :map minibuffer-local-map
@@ -190,7 +191,6 @@
   (counsel-linux-app-format-function #'counsel-linux-app-format-function-name-only)
   :config
   (counsel-mode 1))
-
 (use-package ivy-prescient
   :after counsel
   :custom
@@ -199,7 +199,6 @@
   ;; Uncomment the following line to have sorting remembered across sessions!
   ;(prescient-persist-mode 1)
   (ivy-prescient-mode 1))
-
 (use-package lsp-ivy
   :after lsp)
 

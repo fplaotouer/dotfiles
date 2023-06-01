@@ -64,7 +64,7 @@
         # Deno
         denoland.vscode-deno
         # Lua
-        # sumneko.lua
+        sumneko.lua
         # Yaml
         redhat.vscode-yaml
         # XML

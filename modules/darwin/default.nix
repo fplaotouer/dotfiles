@@ -9,9 +9,10 @@
     ./homebrew.nix
   ];
 
-  config = lib.mkIf (pkgs.stdenv.isDarwin) {
+  config = {
     nix.useDaemon = true;
     services.nix-daemon.enable = true;
+    programs.fish.babelfishPackage = pkgs.babelfish;
     environment.loginShell = "/run/current-system/sw/bin/fish";
   };
 }

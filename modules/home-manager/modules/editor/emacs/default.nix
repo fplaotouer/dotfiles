@@ -3,11 +3,14 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  cfg = config.programs.emacs;
+in {
   xdg.configFile."emacs" = {
     source = ./emacs;
     recursive = true;
   };
+  home.packages = lib.optional (cfg.enable) pkgs.emacs-all-the-icons-fonts;
   programs.emacs = {
     package = pkgs.emacs;
     extraConfig = builtins.readFile ./default.el;
@@ -36,7 +39,8 @@
           flycheck-haskell
           flycheck-rust
           flycheck-hledger
-          ivy
+          flymake-shellcheck
+          ivy # generic completion
           ivy-rich
           ivy-prescient
           lsp-ivy

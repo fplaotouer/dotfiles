@@ -1,4 +1,5 @@
 {
+  lib,
   config,
   pkgs,
   ...
@@ -24,6 +25,10 @@
   };
 
   environment.shells = [pkgs.fish];
+  programs.fish = {
+    enable = true;
+    useBabelfish = true;
+  };
 
   system.stateVersion = 4;
 }
