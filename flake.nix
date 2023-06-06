@@ -5,17 +5,21 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable-small";
-    nixpkgs-stable.url = "nixpkgs/nixos-22.11-small";
+    nixpkgs-stable.url = "nixpkgs/nixos-23.05-small";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-utils.url = "github:numtide/flake-utils";
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     sops-nix = {
       url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    flake-utils.url = "github:numtide/flake-utils";
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     darwin = {

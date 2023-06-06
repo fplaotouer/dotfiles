@@ -12,13 +12,4 @@
       then /Users/pangz
       else /home/pangz;
   };
-
-  programs.fish =
-    {
-      enable = true;
-      useBabelfish = true;
-    }
-    // lib.mkIf (pkgs.stdenv.isDarwin) {
-      babelfishPackage = pkgs.babelfish;
-    };
 }

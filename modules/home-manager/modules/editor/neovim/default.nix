@@ -12,7 +12,7 @@
     package = pkgs.neovim-nightly;
     vimAlias = true;
     extraPackages = builtins.attrValues {
-      inherit (pkgs) luajit black shfmt shellcheck;
+      inherit (pkgs) luajit shfmt;
     };
     extraLuaConfig = lib.concatStringsSep "\n" [
       "-- { Basic Configurations"

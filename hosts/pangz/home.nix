@@ -4,13 +4,15 @@
   ...
 }: {
   toolchains.haskell.enable = true;
+  toolchains.rust.enable = true;
   home.packages = [pkgs.stack];
 
   programs = {
     neovim.defaultEditor = true;
+    helix.enable = true;
 
     go.enable = true;
-    emacs.enable = true;
+
     xdg-utils.enable = true;
     kitty.enable = true;
     alacritty.enable = true;
@@ -44,6 +46,7 @@
     tokei.enable = true;
     drill.enable = true;
     just-cli.enable = true;
+    sshpass.enable = true;
     hledger.enable = true;
     icdiff.enable = true;
     zoxide.enable = true;
