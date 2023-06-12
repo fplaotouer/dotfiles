@@ -3,23 +3,30 @@
   pkgs,
   ...
 }: {
+  home.packages = [pkgs.stack];
+
   toolchains.haskell.enable = true;
   toolchains.rust.enable = true;
-  home.packages = [pkgs.stack];
 
   programs = {
     neovim.defaultEditor = true;
     helix.enable = true;
 
     go.enable = true;
+    deno.enable = true;
 
-    xdg-utils.enable = true;
-    kitty.enable = true;
     alacritty.enable = true;
-    zellij.enable = true;
     tmux.enable = true;
-    mpv.enable = true;
+    kitty.enable = true;
+    zellij.enable = true;
 
+    mpv.enable = true;
+    ouch.enable = true;
+    slides.enable = true;
+    taskwarrior.enable = true;
+    wget.enable = true;
+    bitwise.enable = true;
+    xdg-utils.enable = true;
     alejandra.enable = true;
     hyperfine.enable = true;
     syncthing.enable = true;
@@ -38,7 +45,6 @@
     sd.enable = true;
     jq.enable = true;
     fd.enable = true;
-    deno.enable = true;
     exa.enable = true;
     navi.enable = true;
     xplr.enable = true;

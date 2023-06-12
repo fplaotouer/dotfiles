@@ -16,9 +16,11 @@
     sops.enable = true;
     neovim.enable = true;
     fish.enable = true;
+    curl.enable = true;
     ssh.enable = true;
     git.enable = true;
     gpg.enable = true;
+    coreutils.enable = true;
     password-store.enable = true;
     home-manager.enable = true;
   };

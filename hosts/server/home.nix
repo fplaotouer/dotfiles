@@ -4,9 +4,7 @@
   ...
 }: {
   programs = {
-    alejandra.enable = true;
     neofetch.enable = true;
-    aria2.enable = true;
     fzf.enable = true;
     bat.enable = true;
     sd.enable = true;
@@ -20,6 +18,5 @@
     zoxide.enable = true;
     ripgrep.enable = true;
     direnv.enable = true;
-    starship.enable = true;
   };
 }

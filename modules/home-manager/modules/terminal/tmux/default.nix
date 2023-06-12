@@ -5,6 +5,7 @@
   ...
 }: {
   programs.tmux = {
+    terminal = "screen-256color";
     escapeTime = 10;
     historyLimit = 5000;
     newSession = true;
@@ -20,6 +21,7 @@
     ];
 
     extraConfig = ''
+      set-option -sa terminal-features ',alacritty:RGB'
       set -g status-position bottom
       set -g set-clipboard on
       set -g mouse on
