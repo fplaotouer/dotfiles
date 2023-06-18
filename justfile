@@ -6,5 +6,4 @@ upxnvim:
       --update-input home-manager \
       --update-input sops-nix \
       --update-input darwin \
-      --update-input flake-utils \
-      --update-input guihua-lua-nvim
+      --update-input flake-utils

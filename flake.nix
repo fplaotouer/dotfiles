@@ -26,11 +26,6 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    guihua-lua-nvim = {
-      url = "github:ray-x/guihua.lua";
-      flake = false;
-    };
   };
 
   outputs = {
@@ -42,7 +37,6 @@
     flake-utils,
     neovim-nightly-overlay,
     darwin,
-    guihua-lua-nvim,
   }:
     flake-utils.lib.eachDefaultSystem
     (system: {
@@ -53,21 +47,11 @@
     })
     // {
       overlays = {
-        neovimNightly = neovim-nightly-overlay.overlay;
         # Extra channel
         nixpkgsStable = final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};};
-        extraVimPlugins = final: prev: let
-          guihua-lua = prev.vimUtils.buildVimPluginFrom2Nix {
-            name = "guihua-lua";
-            src = guihua-lua-nvim;
-          };
-        in {
-          vimPlugins =
-            prev.vimPlugins
-            // {
-              inherit guihua-lua;
-            };
-        };
+        # Neovim Nightly
+        # until this [issue](https://github.com/NixOS/nixpkgs/issues/229275) resolved
+        # neovimNightly = neovim-nightly-overlay.overlay;
       };
 
       darwinConfigurations.pangz = darwin.lib.darwinSystem {
