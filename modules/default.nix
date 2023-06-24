@@ -25,6 +25,7 @@
   };
 
   environment.shells = [pkgs.fish];
+  environment.pathsToLink = ["/share/zsh"];
   programs.fish = {
     enable = true;
     useBabelfish = true;
