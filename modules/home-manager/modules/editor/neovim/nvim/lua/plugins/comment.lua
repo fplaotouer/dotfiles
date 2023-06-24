@@ -5,7 +5,6 @@ return {
 			"JoosepAlviste/nvim-ts-context-commentstring",
 		},
 		opts = {
-			ensure_installed = "all",
 			context_commentstring = {
 				enable = true,
 				enable_autocmd = false,

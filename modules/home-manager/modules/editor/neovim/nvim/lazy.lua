@@ -24,7 +24,10 @@ require("lazy").setup({
 			{ "saecki/crates.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 		},
 		{ import = "plugins" },
+		-- LazyVim Configuations
 		{
+			-- Override defaults
+			{ "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = "all" } },
 			-- Extra LazyVim plugins
 			{ import = "lazyvim.plugins.extras.dap.core" },
 			{ import = "lazyvim.plugins.extras.test.core" },
