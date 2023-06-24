@@ -15,6 +15,7 @@
     age.enable = true;
     sops.enable = true;
     neovim.enable = true;
+    bash.enable = true;
     fish.enable = true;
     curl.enable = true;
     ssh.enable = true;
