@@ -5,10 +5,7 @@ return {
 		opts = {
 			---@type lspconfig.options
 			servers = {
-				marksman = {},
-				yamlls = {},
 				bashls = {},
-				denols = {},
 				nil_ls = {
 					settings = {
 						["nil"] = {
@@ -40,6 +37,8 @@ return {
 						},
 					},
 				},
+				marksman = {},
+				yamlls = {},
 			},
 		},
 	},

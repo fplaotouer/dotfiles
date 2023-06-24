@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  toolchains.rust.enable = true;
   programs = {
     neofetch.enable = true;
     fzf.enable = true;
