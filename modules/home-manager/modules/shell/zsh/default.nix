@@ -8,6 +8,6 @@
     autocd = true;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
-    history.path = "${config.xdg.dataHome}/zsh/history";
+    history.path = "${config.xdg.stateHome}/zsh/history";
   };
 }
