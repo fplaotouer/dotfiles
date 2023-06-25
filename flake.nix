@@ -79,6 +79,25 @@
       };
 
       homeConfigurations = {
+        minimal = let
+          system = "x86_64-linux";
+          pkgs = builtins.getAttr system self.legacyPackages;
+        in
+          home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
+            extraSpecialArgs = {};
+            modules = [
+              ./modules/home-manager
+              ./hosts/minimal/home.nix
+              sops-nix.homeManagerModule
+              {
+                home.username = "pangz";
+                home.homeDirectory = "/home/pangz";
+                nixpkgs.overlays = builtins.attrValues self.overlays;
+                nix.registry.n.flake = self;
+              }
+            ];
+          };
         server-pangz = let
           system = "x86_64-linux";
           pkgs = builtins.getAttr system self.legacyPackages;

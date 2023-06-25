@@ -13,11 +13,11 @@
 
   programs = {
     age.enable = true;
+    sops.enable = true;
+    neovim.enable = true;
     zsh.enable = true;
     bash.enable = true;
     fish.enable = true;
-    sops.enable = true;
-    neovim.enable = true;
     curl.enable = true;
     ssh.enable = true;
     git.enable = true;

@@ -25,7 +25,7 @@
   };
 
   environment.shells = [pkgs.fish];
-  environment.pathsToLink = ["/share/zsh"];
+  environment.pathsToLink = ["/share/zsh" "/share/bash-completion"];
   programs.fish = {
     enable = true;
     useBabelfish = true;
