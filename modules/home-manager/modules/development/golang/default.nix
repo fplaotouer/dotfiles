@@ -8,7 +8,7 @@
 in {
   config = lib.mkIf (cfg.enable) {
     home.packages = builtins.attrValues {
-      inherit (pkgs) gopls delve gofumpt;
+      inherit (pkgs) gopls delve;
     };
     home.sessionPath = ["${config.home.homeDirectory}/${cfg.goBin}"];
     programs.go = {
