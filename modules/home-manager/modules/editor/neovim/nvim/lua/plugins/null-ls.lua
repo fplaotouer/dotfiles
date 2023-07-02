@@ -12,6 +12,9 @@ return {
 					null_ls.builtins.diagnostics.fish,
 					null_ls.builtins.formatting.fish_indent,
 					null_ls.builtins.formatting.stylua,
+					null_ls.builtins.formatting.ruff,
+					null_ls.builtins.diagnostics.ruff,
+					null_ls.builtins.formatting.black,
 				},
 			}
 		end,

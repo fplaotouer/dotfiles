@@ -15,6 +15,7 @@ return {
 						},
 					},
 				},
+				pyright = {},
 				ansiblels = {
 					settings = {
 						ansible = {
