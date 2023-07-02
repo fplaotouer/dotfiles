@@ -7,7 +7,7 @@
   programs.zsh = {
     autocd = true;
     enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
     history.path = "${config.xdg.stateHome}/zsh/history";
   };
 }
