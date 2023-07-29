@@ -29,12 +29,19 @@ require("lazy").setup({
 			-- Override defaults
 			{ "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = "all" } },
 			-- Extra LazyVim plugins
+			{ import = "lazyvim.plugins.extras.ui.edgy" },
 			{ import = "lazyvim.plugins.extras.dap.core" },
+			{ import = "lazyvim.plugins.extras.dap.nlua" },
 			{ import = "lazyvim.plugins.extras.test.core" },
+			{ import = "lazyvim.plugins.extras.lang.python" },
+			{ import = "lazyvim.plugins.extras.lang.python-semshi" },
+			{ import = "lazyvim.plugins.extras.lang.json" },
+			{ import = "lazyvim.plugins.extras.lang.yaml" },
 			-- Disabled LazyVim plugins
 			{ "williamboman/mason.nvim", enabled = false },
 			{ "williamboman/mason-lspconfig.nvim", enabled = false },
 			{ "jay-babu/mason-nvim-dap.nvim", enabled = false },
+			{ "mfussenegger/nvim-dap-python", enabled = false },
 			{ "echasnovski/mini.comment", enabled = false },
 		},
 	},

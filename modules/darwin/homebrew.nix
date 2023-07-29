@@ -42,6 +42,7 @@ in {
       casks = [
         "appcleaner"
         "the-unarchiver"
+        "iina"
         "spotify"
         "liberica-jdk${javaVersion}-full"
         "kitty"
