@@ -5,9 +5,10 @@
 }: {
   programs = {
     neovim.defaultEditor = true;
+    fd.enable = true;
     exa.enable = true;
-    direnv.enable = true;
-    starship.enable = true;
+    zoxide.enable = true;
+    ripgrep.enable = true;
     neofetch.enable = true;
   };
 }

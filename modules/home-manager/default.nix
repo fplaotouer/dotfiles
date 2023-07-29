@@ -15,6 +15,7 @@
     age.enable = true;
     sops.enable = true;
     neovim.enable = true;
+    starship.enable = true;
     zsh.enable = true;
     bash.enable = true;
     fish.enable = true;

@@ -5,7 +5,6 @@
 }: {
   programs = {
     neovim.defaultEditor = true;
-    starship.enable = true;
     neofetch.enable = true;
     fzf.enable = true;
     bat.enable = true;

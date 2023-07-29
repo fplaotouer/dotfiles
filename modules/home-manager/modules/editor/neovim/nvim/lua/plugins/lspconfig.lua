@@ -5,6 +5,7 @@ return {
 		opts = {
 			---@type lspconfig.options
 			servers = {
+				zls = {},
 				bashls = {},
 				nil_ls = {
 					settings = {
@@ -15,7 +16,6 @@ return {
 						},
 					},
 				},
-				pyright = {},
 				ansiblels = {
 					settings = {
 						ansible = {
@@ -39,7 +39,6 @@ return {
 					},
 				},
 				marksman = {},
-				yamlls = {},
 			},
 		},
 	},
