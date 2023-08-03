@@ -9,7 +9,6 @@
     ];
     brews = [
       "subversion"
-      "gradle"
       "lux"
     ];
     casks = [
