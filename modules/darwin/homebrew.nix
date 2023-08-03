@@ -37,11 +37,11 @@ in {
       ];
       brews = [
         "maven"
+        "gradle"
         "ffmpeg"
       ];
       casks = [
         "appcleaner"
-        "the-unarchiver"
         "iina"
         "spotify"
         "liberica-jdk${javaVersion}-full"

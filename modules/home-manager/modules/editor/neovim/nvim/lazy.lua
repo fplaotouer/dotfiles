@@ -20,14 +20,18 @@ require("lazy").setup({
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
 		{ "mrcjkb/haskell-tools.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 		{
-			{ "simrat39/rust-tools.nvim", dependencies = { "mfussenegger/nvim-dap" } },
+			{ "simrat39/rust-tools.nvim", dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } },
 			{ "saecki/crates.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 		},
 		{ import = "plugins" },
 		-- LazyVim Configuations
 		{
 			-- Override defaults
-			{ "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = "all" } },
+			{
+				"nvim-treesitter/nvim-treesitter",
+				dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
+				opts = { ensure_installed = "all", context_commentstring = { enable = true, enable_autocmd = false } },
+			},
 			-- Extra LazyVim plugins
 			{ import = "lazyvim.plugins.extras.ui.edgy" },
 			{ import = "lazyvim.plugins.extras.dap.core" },
