@@ -3,8 +3,6 @@
   pkgs,
   ...
 }: {
-  home.packages = [pkgs.stack];
-
   toolchains.haskell.enable = true;
   toolchains.rust.enable = true;
   toolchains.zig.enable = true;
@@ -13,7 +11,6 @@
     neovim.defaultEditor = true;
     helix.enable = true;
 
-    go.enable = true;
     deno.enable = true;
     poetry.enable = true;
 
