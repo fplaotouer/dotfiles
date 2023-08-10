@@ -14,6 +14,7 @@
     casks = [
       "utm"
       "libreoffice"
+      "tencent-meeting"
       "duckduckgo"
       "docker"
       "liberica-jdk8-full"

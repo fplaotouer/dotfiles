@@ -42,14 +42,16 @@ in {
       ];
       casks = [
         "appcleaner"
+        "hiddenbar"
         "iina"
         "spotify"
         "liberica-jdk${javaVersion}-full"
         "kitty"
         "alacritty"
         "firefox-developer-edition"
+        "telegram"
+        # "signal"
         "mullvadvpn"
-        "signal"
       ];
     };
   };
