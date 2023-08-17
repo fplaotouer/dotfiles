@@ -29,7 +29,6 @@
         black
         sumneko-lua-language-server
         stylua
-        marksman
         ;
       inherit
         (pkgs.nodePackages)

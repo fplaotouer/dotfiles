@@ -5,7 +5,13 @@
   ...
 }: {
   programs.fish = {
-    functions = {};
+    functions = {
+      __fish_command_not_found_handler = {
+        body = "__fish_default_command_not_found_handler $argv[1]";
+        onEvent = "fish_command_not_found";
+      };
+      gitignore = "curl -sL https://www.gitignore.io/api/$argv";
+    };
     shellAbbrs = {};
     loginShellInit = ''
       ### fish PATH reorder workaround: https://github.com/LnL7/nix-darwin/issues/122
