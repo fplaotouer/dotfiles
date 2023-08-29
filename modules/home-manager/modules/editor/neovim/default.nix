@@ -9,6 +9,10 @@
       source = ./nvim/lua;
       recursive = true;
     };
+    "nvim/after" = {
+      source = ./nvim/after;
+      recursive = true;
+    };
   };
 
   programs.neovim = {

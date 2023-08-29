@@ -53,6 +53,7 @@ in {
         cargo-msrv
         cargo-cache
         cargo-bloat
+        cargo-generate
         cargo-local-registry
         ;
     };
