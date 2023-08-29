@@ -18,7 +18,11 @@ vim.g.maplocalleader = " "
 require("lazy").setup({
 	spec = {
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
-		{ "mrcjkb/haskell-tools.nvim", dependencies = { "nvim-lua/plenary.nvim" }, branch = "1.x.x" },
+		{
+			"mrcjkb/haskell-tools.nvim",
+			dependencies = { "nvim-lua/plenary.nvim" },
+			ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
+		},
 		{
 			{ "simrat39/rust-tools.nvim", dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } },
 			{ "saecki/crates.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
