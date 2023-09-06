@@ -13,13 +13,12 @@
   programs = {
     neovim.defaultEditor = true;
 
-    poetry.enable = true;
-
     alacritty.enable = true;
     tmux.enable = true;
     kitty.enable = true;
     zellij.enable = true;
 
+    podman.enable = true;
     dufs.enable = true;
     mpv.enable = true;
     ouch.enable = true;
