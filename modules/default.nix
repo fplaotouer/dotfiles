@@ -9,6 +9,7 @@
   imports = [
     ./nix
     ./nixpkgs
+    ./nixos
   ];
 
   nix.gc = {

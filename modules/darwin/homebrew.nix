@@ -38,7 +38,6 @@ in {
       brews = [
         "maven"
         "gradle"
-        "ffmpeg"
       ];
       casks = [
         "appcleaner"

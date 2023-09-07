@@ -13,8 +13,6 @@
   programs = {
     neovim.defaultEditor = true;
 
-    poetry.enable = true;
-
     alacritty.enable = true;
     tmux.enable = true;
     kitty.enable = true;
