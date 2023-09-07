@@ -18,7 +18,6 @@
     kitty.enable = true;
     zellij.enable = true;
 
-    podman.enable = true;
     dufs.enable = true;
     mpv.enable = true;
     ouch.enable = true;
