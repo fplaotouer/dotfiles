@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  programs.exa = {
+  programs.lsd = {
     enableAliases = true;
   };
 }
