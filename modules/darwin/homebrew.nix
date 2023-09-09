@@ -28,8 +28,6 @@ in {
         upgrade = false;
       };
       taps = [
-        "homebrew/core"
-        "homebrew/cask"
         "homebrew/bundle"
         "homebrew/services"
         "homebrew/cask-versions"

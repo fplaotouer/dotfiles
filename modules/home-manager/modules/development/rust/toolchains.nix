@@ -49,6 +49,8 @@ in {
         cargo-expand
         cargo-zigbuild
         cargo-criterion
+        cargo-wasi
+        cargo-make
         cargo-fuzz
         cargo-msrv
         cargo-cache
