@@ -14,6 +14,7 @@
   programs = {
     age.enable = true;
     sops.enable = true;
+    helix.enable = true;
     neovim.enable = true;
     starship.enable = true;
     zsh.enable = true;

@@ -4,7 +4,7 @@
   ...
 }: {
   programs = {
-    neovim.defaultEditor = true;
+    helix.defaultEditor = true;
     fd.enable = true;
     lsd.enable = true;
     zoxide.enable = true;

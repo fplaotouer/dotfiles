@@ -12,12 +12,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    flake-utils.url = "github:numtide/flake-utils";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-utils.url = "github:numtide/flake-utils";
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,6 +39,7 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
+    rust-overlay,
     sops-nix,
     flake-utils,
     neovim-nightly-overlay,
@@ -49,6 +56,8 @@
       overlays = {
         # Extra channel
         nixpkgsStable = final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};};
+        # rust toolchain
+        rust-toolchain = rust-overlay.overlays.default;
         # Neovim Nightly
         # until this [issue](https://github.com/NixOS/nixpkgs/issues/229275) resolved
         # neovimNightly = neovim-nightly-overlay.overlay;
@@ -60,12 +69,12 @@
           ./modules
           ./modules/darwin
           ./modules/users/pangz
-          ./hosts/pangz/configuration.nix
+          ./profiles/pangz/configuration.nix
           home-manager.darwinModule
           sops-nix.nixosModules.sops
           {
             home-manager.users.pangz = {
-              imports = [./hosts/pangz/home.nix];
+              imports = [./profiles/pangz/home.nix];
             };
             nixpkgs.overlays = builtins.attrValues self.overlays;
             nix = {
@@ -88,26 +97,7 @@
             extraSpecialArgs = {};
             modules = [
               ./modules/home-manager
-              ./hosts/minimal/home.nix
-              sops-nix.homeManagerModule
-              {
-                home.username = "pangz";
-                home.homeDirectory = "/home/pangz";
-                nixpkgs.overlays = builtins.attrValues self.overlays;
-                nix.registry.n.flake = self;
-              }
-            ];
-          };
-        server-pangz = let
-          system = "x86_64-linux";
-          pkgs = builtins.getAttr system self.legacyPackages;
-        in
-          home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-            extraSpecialArgs = {};
-            modules = [
-              ./modules/home-manager
-              ./hosts/server/home.nix
+              ./profiles/minimal/home.nix
               sops-nix.homeManagerModule
               {
                 home.username = "pangz";
