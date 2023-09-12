@@ -69,12 +69,12 @@
           ./modules
           ./modules/darwin
           ./modules/users/pangz
-          ./hosts/pangz/configuration.nix
+          ./profiles/pangz/configuration.nix
           home-manager.darwinModule
           sops-nix.nixosModules.sops
           {
             home-manager.users.pangz = {
-              imports = [./hosts/pangz/home.nix];
+              imports = [./profiles/pangz/home.nix];
             };
             nixpkgs.overlays = builtins.attrValues self.overlays;
             nix = {
@@ -97,26 +97,7 @@
             extraSpecialArgs = {};
             modules = [
               ./modules/home-manager
-              ./hosts/minimal/home.nix
-              sops-nix.homeManagerModule
-              {
-                home.username = "pangz";
-                home.homeDirectory = "/home/pangz";
-                nixpkgs.overlays = builtins.attrValues self.overlays;
-                nix.registry.n.flake = self;
-              }
-            ];
-          };
-        server-pangz = let
-          system = "x86_64-linux";
-          pkgs = builtins.getAttr system self.legacyPackages;
-        in
-          home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-            extraSpecialArgs = {};
-            modules = [
-              ./modules/home-manager
-              ./hosts/server/home.nix
+              ./profiles/minimal/home.nix
               sops-nix.homeManagerModule
               {
                 home.username = "pangz";
