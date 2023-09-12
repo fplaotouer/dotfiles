@@ -36,10 +36,6 @@
       "nix.formatterPath" = "alejandra";
       # Redhat
       "redhat.telemetry.enabled" = false;
-      # JSON formatting
-      "[jsonc]" = {
-        "editor.defaultFormatter" = "denoland.vscode-deno";
-      };
     };
     extensions = with pkgs.vscode-extensions;
       [

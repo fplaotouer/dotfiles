@@ -12,6 +12,8 @@
 
   programs = {
     neovim.defaultEditor = true;
+    neovim.lazyVim = true;
+    vscode.enable = true;
 
     alacritty.enable = true;
     tmux.enable = true;
