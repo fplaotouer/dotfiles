@@ -1,5 +1,4 @@
 return {
-	{ import = "plugins" },
 	{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
 	{
 		"mrcjkb/haskell-tools.nvim",
@@ -34,4 +33,6 @@ return {
 		{ "echasnovski/mini.comment", enabled = false },
 		{ "mfussenegger/nvim-dap-python", enabled = false },
 	},
+	-- import/override with your plugins
+	{ import = "plugins" },
 }
