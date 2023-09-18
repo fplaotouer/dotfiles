@@ -57,7 +57,7 @@
         # Extra channel
         nixpkgsStable = final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};};
         # rust toolchain
-        rust-toolchain = rust-overlay.overlays.default;
+        # rust-toolchain = rust-overlay.overlays.default;
         # Neovim Nightly
         # until this [issue](https://github.com/NixOS/nixpkgs/issues/229275) resolved
         # neovimNightly = neovim-nightly-overlay.overlay;

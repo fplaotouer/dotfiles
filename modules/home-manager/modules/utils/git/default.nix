@@ -13,6 +13,10 @@ in {
         userName = "Pangz Feng";
         userEmail = "43704063+fplaotouer@users.noreply.github.com";
         ignores = [
+          ".idea"
+          ".vscode"
+          ".env"
+          ".envrc"
           ".DS_Store"
         ];
         extraConfig = {

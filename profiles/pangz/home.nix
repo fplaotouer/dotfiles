@@ -20,6 +20,7 @@
     kitty.enable = true;
     zellij.enable = true;
 
+    sshpass.enable = true;
     dufs.enable = true;
     mpv.enable = true;
     ouch.enable = true;
