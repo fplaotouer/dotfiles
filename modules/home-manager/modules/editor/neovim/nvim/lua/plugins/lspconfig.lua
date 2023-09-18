@@ -5,9 +5,15 @@ return {
 		opts = {
 			---@type lspconfig.options
 			servers = {
-				zls = {},
+				hls = { mason = false },
+				rust_analyzer = { mason = false },
+				taplo = { mason = false },
+				zls = { mason = false },
+				lua_ls = { mason = false },
+				gopls = { mason = false },
 				bashls = {},
 				nil_ls = {
+					mason = false,
 					settings = {
 						["nil"] = {
 							formatting = {

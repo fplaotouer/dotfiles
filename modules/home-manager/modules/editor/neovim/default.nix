@@ -36,9 +36,6 @@ in {
           shellcheck
           shfmt
           nil
-          ruff
-          pyright
-          black
           sumneko-lua-language-server
           stylua
           ;
