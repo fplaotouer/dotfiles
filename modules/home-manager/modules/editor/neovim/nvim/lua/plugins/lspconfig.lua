@@ -5,7 +5,6 @@ return {
 		opts = {
 			---@type lspconfig.options
 			servers = {
-				hls = { mason = false },
 				rust_analyzer = { mason = false },
 				taplo = { mason = false },
 				zls = { mason = false },
