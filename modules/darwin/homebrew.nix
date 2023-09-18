@@ -42,6 +42,7 @@ in {
         "hiddenbar"
         "iina"
         "spotify"
+        "netnewswire"
         "liberica-jdk${javaVersion}-full"
         "kitty"
         "alacritty"
