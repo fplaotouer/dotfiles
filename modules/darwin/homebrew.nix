@@ -48,7 +48,7 @@ in {
         "alacritty"
         "firefox-developer-edition"
         "telegram"
-        # "signal"
+        "signal"
         "mullvadvpn"
       ];
     };
