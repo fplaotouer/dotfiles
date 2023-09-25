@@ -13,21 +13,12 @@
     };
 
     flake-utils.url = "github:numtide/flake-utils";
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
 
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,10 +30,8 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
-    rust-overlay,
     sops-nix,
     flake-utils,
-    neovim-nightly-overlay,
     darwin,
   }:
     flake-utils.lib.eachDefaultSystem
@@ -56,11 +45,6 @@
       overlays = {
         # Extra channel
         nixpkgsStable = final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};};
-        # rust toolchain
-        # rust-toolchain = rust-overlay.overlays.default;
-        # Neovim Nightly
-        # until this [issue](https://github.com/NixOS/nixpkgs/issues/229275) resolved
-        # neovimNightly = neovim-nightly-overlay.overlay;
       };
 
       darwinConfigurations.pangz = darwin.lib.darwinSystem {

@@ -7,12 +7,12 @@
   cfg = config.toolchains.ccpp;
 in {
   options.toolchains.ccpp = {
-    enable = lib.mkEnableOption "Enable CMake and clangd";
+    enable = lib.mkEnableOption "Enable clangd and CMake";
   };
 
   config = lib.mkIf (cfg.enable) {
     home.packages = builtins.attrValues {
-      inherit (pkgs) clang-tools cmake cmake-language-server;
+      inherit (pkgs) clang-tools cmake;
     };
   };
 }

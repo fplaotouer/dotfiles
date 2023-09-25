@@ -4,9 +4,9 @@
   pkgs,
   ...
 }: let
-  cfg = config.toolchains.deno;
+  cfg = config.programs.deno;
 in {
-  options.toolchains.deno = {
+  options.programs.deno = {
     enable = lib.mkEnableOption "A modern runtime for JavaScript and TypeScript.";
   };
 

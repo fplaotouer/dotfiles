@@ -7,13 +7,14 @@
     haskell.enable = true;
     rust.enable = true;
     zig.enable = true;
-    deno.enable = true;
+    ccpp.enable = true;
   };
 
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
-    vscode.enable = true;
+
+    deno.enable = true;
 
     alacritty.enable = true;
     tmux.enable = true;
