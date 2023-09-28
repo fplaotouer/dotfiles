@@ -44,7 +44,6 @@ in {
         lld
         sccache
         graphviz
-        taplo-cli
         cargo-binutils
         cargo-expand
         cargo-zigbuild

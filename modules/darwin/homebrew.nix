@@ -43,6 +43,7 @@ in {
         "iina"
         "spotify"
         "netnewswire"
+        "usbimager"
         "liberica-jdk${javaVersion}-full"
         "kitty"
         "alacritty"
