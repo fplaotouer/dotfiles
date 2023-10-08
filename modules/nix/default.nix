@@ -9,7 +9,6 @@
     package = lib.mkDefault pkgs.nixVersions.stable;
     settings = {
       experimental-features = "nix-command flakes";
-      substituters = lib.mkBefore ["https://mirror.sjtu.edu.cn/nix-channels/store"];
       trusted-users = ["root" "pangz"];
       bash-prompt = "[nix]λ ";
       # sandbox = true;
