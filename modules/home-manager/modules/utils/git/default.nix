@@ -22,6 +22,7 @@ in {
         extraConfig = {
           github.user = "fplaotouer";
           init.defaultBranch = "main";
+          core.autocrlf = "input";
           core.quotePath = false;
         };
         aliases = {

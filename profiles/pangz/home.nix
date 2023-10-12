@@ -31,7 +31,6 @@
     hledger.enable = true;
     tokei.enable = true;
     tshark.enable = true;
-    alejandra.enable = true;
     hyperfine.enable = true;
     tealdeer.enable = true;
     du-dust.enable = true;

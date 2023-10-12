@@ -20,6 +20,7 @@ return {
 		{ import = "lazyvim.plugins.extras.lang.python-semshi" },
 		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.yaml" },
+		{ import = "lazyvim.plugins.extras.vscode" },
 		-- Disabled LazyVim plugins
 		{ "echasnovski/mini.comment", enabled = false },
 		-- Override defaults
