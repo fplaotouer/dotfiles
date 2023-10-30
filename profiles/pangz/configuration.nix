@@ -15,7 +15,7 @@
       "utm"
       "tencent-meeting"
       "duckduckgo"
-      "notion"
+      "netnewswire"
       "docker"
       "liberica-jdk8-full"
     ];

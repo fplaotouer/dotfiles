@@ -7,12 +7,12 @@
     haskell.enable = true;
     rust.enable = true;
     zig.enable = true;
-    ccpp.enable = true;
   };
 
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
+    vscode.enable = true;
 
     deno.enable = true;
 
