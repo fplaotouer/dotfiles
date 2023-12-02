@@ -36,18 +36,21 @@ in {
       brews = [
         "maven"
         "gradle"
+        "cmake-docs"
+        "cmake"
+        "ninja"
+        "xmake"
       ];
       casks = [
         "appcleaner"
         "hiddenbar"
         "iina"
         "spotify"
-        "netnewswire"
+        "telegram"
         "liberica-jdk${javaVersion}-full"
         "kitty"
         "alacritty"
         "firefox-developer-edition"
-        "telegram"
         "signal"
         "mullvadvpn"
       ];

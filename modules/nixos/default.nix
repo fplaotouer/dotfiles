@@ -9,10 +9,8 @@
     systemPackages = builtins.attrValues {
       inherit
         (pkgs)
-        qemu
         ffmpeg
-        llvm-manpages
-        libllvm
+        qemu
         ;
     };
   };

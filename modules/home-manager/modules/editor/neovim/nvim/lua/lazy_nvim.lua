@@ -11,8 +11,6 @@ return {
 		{ import = "lazyvim.plugins.extras.dap.core" },
 		{ import = "lazyvim.plugins.extras.dap.nlua" },
 		{ import = "lazyvim.plugins.extras.test.core" },
-		{ import = "lazyvim.plugins.extras.util.project" },
-		{ import = "lazyvim.plugins.extras.ui.edgy" },
 		{ import = "lazyvim.plugins.extras.lang.rust" },
 		{ import = "lazyvim.plugins.extras.lang.clangd" },
 		{ import = "lazyvim.plugins.extras.lang.cmake" },
@@ -20,15 +18,13 @@ return {
 		{ import = "lazyvim.plugins.extras.lang.python-semshi" },
 		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.yaml" },
-		{ import = "lazyvim.plugins.extras.vscode" },
+		{ import = "lazyvim.plugins.extras.util.project" },
+		{ import = "lazyvim.plugins.extras.ui.edgy" },
 		-- Disabled LazyVim plugins
 		{ "echasnovski/mini.comment", enabled = false },
 		-- Override defaults
-		{
-			"nvim-treesitter/nvim-treesitter",
-			dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
-			opts = { ensure_installed = "all", context_commentstring = { enable = true, enable_autocmd = false } },
-		},
+		{ "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = "all" } },
+		{ "JoosepAlviste/nvim-ts-context-commentstring", opts = { enable_autocmd = false } },
 	},
 	-- import/override with your plugins
 	{ import = "plugins" },

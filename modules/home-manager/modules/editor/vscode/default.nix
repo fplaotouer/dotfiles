@@ -19,6 +19,9 @@
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.startupEditor" = "none";
       "workbench.colorTheme" = "Gruvbox Material Dark";
+      "extensions.experimental.affinity" = {
+        "asvetliakov.vscode-neovim" = 1;
+      };
       # vscode-neovim requirements
       "vscode-neovim.neovimClean" = true;
       "vscode-neovim.neovimExecutablePaths.darwin" = "nvim";
@@ -34,6 +37,19 @@
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "nix.formatterPath" = "alejandra";
+      # Deno
+      "[typescriptreact]" = {
+        "editor.defaultFormatter" = "denoland.vscode-deno";
+      };
+      "[typescript]" = {
+        "editor.defaultFormatter" = "denoland.vscode-deno";
+      };
+      "[javascriptreact]" = {
+        "editor.defaultFormatter" = "denoland.vscode-deno";
+      };
+      "[javascript]" = {
+        "editor.defaultFormatter" = "denoland.vscode-deno";
+      };
       # Redhat
       "redhat.telemetry.enabled" = false;
     };
@@ -62,6 +78,7 @@
         redhat.vscode-xml
         # Misc.
         mkhl.direnv
+        eamodio.gitlens
         pkief.material-icon-theme
         christian-kohler.path-intellisense
         ms-vscode-remote.remote-ssh
@@ -73,18 +90,6 @@
           publisher = "sainnhe";
           version = "6.5.2";
           sha256 = "sha256-D+SZEQQwjZeuyENOYBJGn8tqS3cJiWbEkmEqhNRY/i4=";
-        }
-        {
-          name = "gitlens";
-          publisher = "eamodio";
-          version = "12.1.2";
-          sha256 = "sha256-qclBbZeGH7ODYAruhTi7X5FTRcai29nGTpSbeF129XI=";
-        }
-        {
-          name = "ansible";
-          publisher = "redhat";
-          version = "1.2.44";
-          sha256 = "sha256-Mfc/sT7qkI/6AEDZFd0DkAui5JayzrK3z/xzcF5hCSk=";
         }
       ];
   };
