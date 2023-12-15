@@ -43,6 +43,7 @@ in {
       ];
       casks = [
         "appcleaner"
+        "the-unarchiver"
         "hiddenbar"
         "iina"
         "spotify"

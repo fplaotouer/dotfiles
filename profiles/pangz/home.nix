@@ -21,11 +21,14 @@
     kitty.enable = true;
     zellij.enable = true;
 
+    lazygit.enable = true;
+    gitui.enable = true;
     sshpass.enable = true;
     dufs.enable = true;
     mpv.enable = true;
     ouch.enable = true;
     slides.enable = true;
+    syncthing.enable = true;
     taskwarrior.enable = true;
     bitwise.enable = true;
     hledger.enable = true;
