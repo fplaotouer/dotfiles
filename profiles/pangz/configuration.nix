@@ -17,7 +17,6 @@
       "duckduckgo"
       "netnewswire"
       "docker"
-      "balenaetcher"
       "liberica-jdk8-full"
     ];
   };
