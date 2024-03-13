@@ -47,11 +47,8 @@ in {
         "hiddenbar"
         "iina"
         "spotify"
-        "telegram"
         "liberica-jdk${javaVersion}-full"
-        "kitty"
         "alacritty"
-        "firefox-developer-edition"
         "signal"
         "mullvadvpn"
       ];

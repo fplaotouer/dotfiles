@@ -12,10 +12,7 @@
       "lux"
     ];
     casks = [
-      "utm"
       "tencent-meeting"
-      "duckduckgo"
-      "netnewswire"
       "docker"
       "liberica-jdk8-full"
     ];
