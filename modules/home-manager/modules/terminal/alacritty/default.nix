@@ -7,7 +7,6 @@
   programs.alacritty = {
     settings = {
       live_config_reload = true;
-      draw_bold_text_with_bright_colors = false;
       import = [];
       env = {};
       window = {
@@ -38,6 +37,7 @@
       };
       colors = {
         transparent_background_colors = true;
+        draw_bold_text_with_bright_colors = false;
         primary = {
           background = "#1d2021";
           foreground = "#d5c4a1";
@@ -81,7 +81,6 @@
       };
       cursor = {
         unfocused_hollow = true;
-        blinking_interval = 750;
         thickness = 0.15;
         style = {
           shape = "Block";
@@ -99,11 +98,9 @@
       };
       mouse = {
         hide_when_typing = false;
-        double_click = {threshold = 300;};
-        triple_click = {threshold = 300;};
+        bindings = [];
       };
-      mouse_bindings = [];
-      key_bindings = [];
+      keyboard.bindings = [];
     };
   };
 }

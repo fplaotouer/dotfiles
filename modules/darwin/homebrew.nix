@@ -43,14 +43,12 @@ in {
       ];
       casks = [
         "appcleaner"
+        "the-unarchiver"
         "hiddenbar"
         "iina"
         "spotify"
-        "telegram"
         "liberica-jdk${javaVersion}-full"
-        "kitty"
         "alacritty"
-        "firefox-developer-edition"
         "signal"
         "mullvadvpn"
       ];

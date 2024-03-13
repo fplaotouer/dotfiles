@@ -11,9 +11,10 @@
       experimental-features = "nix-command flakes";
       trusted-users = ["root" "pangz"];
       bash-prompt = "[nix]λ ";
-      # sandbox = true;
-      auto-optimise-store = true;
+      sandbox = false;
+      auto-optimise-store = false;
       keep-derivations = true;
+      keep-outputs = false;
       use-case-hack = true;
     };
   };

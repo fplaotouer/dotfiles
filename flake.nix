@@ -5,7 +5,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable-small";
-    nixpkgs-stable.url = "nixpkgs/nixos-23.05-small";
+    nixpkgs-stable.url = "nixpkgs/nixos-23.11-small";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -55,7 +55,7 @@
           ./modules/users/pangz
           ./profiles/pangz/configuration.nix
           home-manager.darwinModule
-          sops-nix.nixosModules.sops
+          # sops-nix.nixosModules.sops
           {
             home-manager.users.pangz = {
               imports = [./profiles/pangz/home.nix];
@@ -82,7 +82,7 @@
             modules = [
               ./modules/home-manager
               ./profiles/minimal/home.nix
-              sops-nix.homeManagerModule
+              # sops-nix.homeManagerModule
               {
                 home.username = "pangz";
                 home.homeDirectory = "/home/pangz";
