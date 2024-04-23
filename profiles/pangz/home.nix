@@ -9,6 +9,8 @@
     zig.enable = true;
   };
 
+  home.sessionPath = ["${config.home.homeDirectory}/Library/Application Support/Coursier/bin"];
+
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;

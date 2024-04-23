@@ -12,7 +12,7 @@
       trusted-users = ["root" "pangz"];
       bash-prompt = "[nix]λ ";
       sandbox = false;
-      auto-optimise-store = false;
+      auto-optimise-store = true;
       keep-derivations = true;
       keep-outputs = false;
       use-case-hack = true;
