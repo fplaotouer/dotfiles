@@ -16,6 +16,7 @@
     neovim.lazyVim = true;
 
     deno.enable = true;
+    poetry.enable = true;
 
     alacritty.enable = true;
     tmux.enable = true;
