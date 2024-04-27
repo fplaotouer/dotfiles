@@ -14,25 +14,24 @@
   homebrew = {
     enable = true;
     taps = [
-      "surrealdb/tap"
       "coursier/formulas"
       "bell-sw/liberica"
     ];
     brews = [
-      "subversion"
       "lux"
-      "surreal"
       "coursier"
       "maven"
       "gradle"
-      "cmake-docs"
+      "xmake"
       "cmake"
       "ninja"
-      "xmake"
     ];
     casks = [
       "tencent-meeting"
       "docker"
+      "appcleaner"
+      "the-unarchiver"
+      "hiddenbar"
       "liberica-jdk8-full"
       "liberica-jdk17-full"
     ];

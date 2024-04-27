@@ -28,10 +28,6 @@
       brews = [
       ];
       casks = [
-        "appcleaner"
-        "the-unarchiver"
-        "hiddenbar"
-        "iina"
         "alacritty"
         "mullvadvpn"
       ];

@@ -20,8 +20,9 @@
 
     alacritty.enable = true;
     tmux.enable = true;
-    zellij.enable = true;
+    # zellij.enable = true;
 
+    mpv.enable = true;
     lazygit.enable = true;
     gitui.enable = true;
     sshpass.enable = true;
@@ -50,13 +51,5 @@
     fzf.enable = true;
     icdiff.enable = true;
     wget.enable = true;
-
-    bat.enable = true;
-    sd.enable = true;
-    jq.enable = true;
-    fd.enable = true;
-    lsd.enable = true;
-    zoxide.enable = true;
-    ripgrep.enable = true;
   };
 }
