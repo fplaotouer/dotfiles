@@ -23,11 +23,10 @@
             hoogle
             # tools
             cabal2nix
-            stylish-haskell
-            haskell-dap
-            ghci-dap
-            haskell-debug-adapter
+            # haskell-tools.nvim optional prerequisites
             fast-tags
+            haskell-debug-adapter
+            # miscellaneous
             hlint
           ]
           # Workaround

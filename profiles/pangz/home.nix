@@ -15,7 +15,9 @@
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
 
+    vscode.enable = true;
     deno.enable = true;
+
     poetry.enable = true;
 
     alacritty.enable = true;

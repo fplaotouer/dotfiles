@@ -8,6 +8,7 @@
     inherit
       (pkgs)
       alejandra
+      pkg-config
       ;
   };
 }
