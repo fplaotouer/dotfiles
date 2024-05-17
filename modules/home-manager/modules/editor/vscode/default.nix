@@ -35,10 +35,6 @@
       "zig.path" = "";
       "zig.zls.path" = "";
       "zig.initialSetupDone" = true;
-      # Nix LSP
-      "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "nil";
-      "nix.formatterPath" = "alejandra";
       # Python Ruff
       "[python]" = {
         "editor.codeActionsOnSave" = {
@@ -63,14 +59,10 @@
         serayuzgur.crates
         # Ziglang
         ziglang.vscode-zig
-        # Nix Pack
-        jnoortheen.nix-ide
         # Bash
         mads-hartmann.bash-ide-vscode
         # Deno
         # denoland.vscode-deno
-        # Lua
-        sumneko.lua
         # Python
         ms-python.python
         charliermarsh.ruff

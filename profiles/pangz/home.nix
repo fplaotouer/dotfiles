@@ -3,12 +3,6 @@
   pkgs,
   ...
 }: {
-  toolchains = {
-    haskell.enable = true;
-    rust.enable = true;
-    zig.enable = true;
-  };
-
   home.sessionPath = ["${config.home.homeDirectory}/Library/Application Support/Coursier/bin"];
 
   programs = {
@@ -16,9 +10,10 @@
     neovim.lazyVim = true;
 
     vscode.enable = true;
-    deno.enable = true;
 
+    deno.enable = true;
     poetry.enable = true;
+    tailwindcss.enable = true;
 
     alacritty.enable = true;
     tmux.enable = true;
@@ -44,7 +39,6 @@
     navi.enable = true;
     xplr.enable = true;
     usql.enable = true;
-
     xdg-utils.enable = true;
     direnv.enable = true;
     bottom.enable = true;

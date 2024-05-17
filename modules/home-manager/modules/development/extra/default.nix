@@ -7,8 +7,8 @@
   home.packages = builtins.attrValues {
     inherit
       (pkgs)
-      alejandra
       pkg-config
+      alejandra
       ;
   };
 }

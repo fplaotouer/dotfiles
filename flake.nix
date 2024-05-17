@@ -12,12 +12,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-utils.url = "github:numtide/flake-utils";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    flake-utils.url = "github:numtide/flake-utils";
 
     darwin = {
       url = "github:LnL7/nix-darwin";
@@ -30,7 +27,7 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
-    sops-nix,
+    neovim-nightly-overlay,
     flake-utils,
     darwin,
   }:
@@ -43,6 +40,7 @@
     })
     // {
       overlays = {
+        neovimNightlyOverlay = neovim-nightly-overlay.overlay;
         # Extra channel
         nixpkgsStable = final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};};
       };
@@ -55,7 +53,6 @@
           ./modules/users/pangz
           ./profiles/pangz/configuration.nix
           home-manager.darwinModule
-          # sops-nix.nixosModules.sops
           {
             home-manager.users.pangz = {
               imports = [./profiles/pangz/home.nix];
@@ -82,7 +79,6 @@
             modules = [
               ./modules/home-manager
               ./profiles/minimal/home.nix
-              # sops-nix.homeManagerModule
               {
                 home.username = "pangz";
                 home.homeDirectory = "/home/pangz";
