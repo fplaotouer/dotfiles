@@ -3,25 +3,23 @@
   pkgs,
   ...
 }: {
-  toolchains = {
-    haskell.enable = true;
-    rust.enable = true;
-    zig.enable = true;
-  };
-
   home.sessionPath = ["${config.home.homeDirectory}/Library/Application Support/Coursier/bin"];
 
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
 
+    vscode.enable = true;
+
     deno.enable = true;
     poetry.enable = true;
+    tailwindcss.enable = true;
 
     alacritty.enable = true;
     tmux.enable = true;
-    zellij.enable = true;
+    # zellij.enable = true;
 
+    mpv.enable = true;
     lazygit.enable = true;
     gitui.enable = true;
     sshpass.enable = true;
@@ -41,7 +39,6 @@
     navi.enable = true;
     xplr.enable = true;
     usql.enable = true;
-
     xdg-utils.enable = true;
     direnv.enable = true;
     bottom.enable = true;
@@ -50,13 +47,5 @@
     fzf.enable = true;
     icdiff.enable = true;
     wget.enable = true;
-
-    bat.enable = true;
-    sd.enable = true;
-    jq.enable = true;
-    fd.enable = true;
-    lsd.enable = true;
-    zoxide.enable = true;
-    ripgrep.enable = true;
   };
 }

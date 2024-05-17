@@ -12,18 +12,27 @@
   xdg.enable = true;
 
   programs = {
-    age.enable = true;
-    sops.enable = true;
+    # Essential Tools
+    jq.enable = true;
+    sd.enable = true;
+    fd.enable = true;
+    bat.enable = true;
+    lsd.enable = true;
+    zoxide.enable = true;
+    ripgrep.enable = true;
+    # Editors
     helix.enable = true;
     neovim.enable = true;
+    # Shells
     starship.enable = true;
     zsh.enable = true;
     bash.enable = true;
     fish.enable = true;
-    curl.enable = true;
+    # Utilities
     ssh.enable = true;
     git.enable = true;
     gpg.enable = true;
+    curl.enable = true;
     coreutils.enable = true;
     password-store.enable = true;
     home-manager.enable = true;

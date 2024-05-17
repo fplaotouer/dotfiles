@@ -31,24 +31,17 @@
       "gruvboxMaterial.highContrast" = true;
       # manage Haskell toolchains manually
       "haskell.manageHLS" = "PATH";
-      # vscode-lldb
-      "lldb.suppressUpdateNotifications" = true;
-      # Nix LSP
-      "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "nil";
-      "nix.formatterPath" = "alejandra";
-      # Deno
-      "[typescriptreact]" = {
-        "editor.defaultFormatter" = "denoland.vscode-deno";
-      };
-      "[typescript]" = {
-        "editor.defaultFormatter" = "denoland.vscode-deno";
-      };
-      "[javascriptreact]" = {
-        "editor.defaultFormatter" = "denoland.vscode-deno";
-      };
-      "[javascript]" = {
-        "editor.defaultFormatter" = "denoland.vscode-deno";
+      # Empty string will lookup zig in PATH
+      "zig.path" = "";
+      "zig.zls.path" = "";
+      "zig.initialSetupDone" = true;
+      # Python Ruff
+      "[python]" = {
+        "editor.codeActionsOnSave" = {
+          "source.fixAll" = "explicit";
+          "source.organizeImports" = "explicit";
+        };
+        "editor.defaultFormatter" = "charliermarsh.ruff";
       };
       # Redhat
       "redhat.telemetry.enabled" = false;
@@ -64,14 +57,15 @@
         matklad.rust-analyzer
         tamasfe.even-better-toml
         serayuzgur.crates
-        # Nix Pack
-        jnoortheen.nix-ide
+        # Ziglang
+        ziglang.vscode-zig
         # Bash
         mads-hartmann.bash-ide-vscode
         # Deno
-        denoland.vscode-deno
-        # Lua
-        sumneko.lua
+        # denoland.vscode-deno
+        # Python
+        ms-python.python
+        charliermarsh.ruff
         # Yaml
         redhat.vscode-yaml
         # XML
