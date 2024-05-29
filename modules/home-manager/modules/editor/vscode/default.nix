@@ -66,6 +66,8 @@
         # Python
         ms-python.python
         charliermarsh.ruff
+        # Tailwind CSS
+        bradlc.vscode-tailwindcss
         # Yaml
         redhat.vscode-yaml
         # XML

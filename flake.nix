@@ -40,7 +40,7 @@
     })
     // {
       overlays = {
-        neovimNightlyOverlay = neovim-nightly-overlay.overlay;
+        neovimNightlyOverlay = neovim-nightly-overlay.overlays.default;
         # Extra channel
         nixpkgsStable = final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};};
       };
