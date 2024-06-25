@@ -1,18 +1,19 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   imports = [
-    ./fonts.nix
-    ./homebrew.nix
+    ./..
+    ./modules
   ];
 
   config = {
-    nix.useDaemon = true;
+    nix = {
+      useDaemon = true;
+      optimise.automatic = true;
+      settings = {
+        sandbox = false;
+        use-case-hack = true;
+      };
+    };
     services.nix-daemon.enable = true;
-    programs.fish.babelfishPackage = pkgs.babelfish;
     environment.loginShell = "/run/current-system/sw/bin/fish";
   };
 }

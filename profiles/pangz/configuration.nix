@@ -28,7 +28,6 @@
     ];
     casks = [
       "tencent-meeting"
-      "docker"
       "appcleaner"
       "the-unarchiver"
       "hiddenbar"

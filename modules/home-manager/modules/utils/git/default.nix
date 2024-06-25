@@ -10,8 +10,6 @@ in {
     home.packages = [pkgs.git-crypt];
     programs = {
       git = {
-        userName = "Pangz Feng";
-        userEmail = "43704063+fplaotouer@users.noreply.github.com";
         ignores = [
           ".idea"
           ".vscode"
@@ -20,7 +18,6 @@ in {
           ".DS_Store"
         ];
         extraConfig = {
-          github.user = "fplaotouer";
           init.defaultBranch = "main";
           core.autocrlf = "input";
           core.quotePath = false;

@@ -54,7 +54,7 @@
         haskell.haskell
         justusadam.language-haskell
         # Rust Pack
-        matklad.rust-analyzer
+        rust-lang.rust-analyzer
         tamasfe.even-better-toml
         serayuzgur.crates
         # Ziglang

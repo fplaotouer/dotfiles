@@ -23,13 +23,12 @@
       taps = [
         "homebrew/bundle"
         "homebrew/services"
-        "homebrew/cask-versions"
       ];
       brews = [
       ];
       casks = [
         "alacritty"
-        "mullvadvpn"
+        "mullvadvpn@beta"
       ];
     };
   };

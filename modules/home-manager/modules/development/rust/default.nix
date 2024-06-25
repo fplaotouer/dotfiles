@@ -34,18 +34,6 @@ in {
         lld
         sccache
         graphviz
-        cargo-binutils
-        cargo-expand
-        cargo-zigbuild
-        cargo-criterion
-        cargo-wasi
-        cargo-make
-        cargo-fuzz
-        cargo-msrv
-        cargo-cache
-        cargo-bloat
-        cargo-generate
-        cargo-local-registry
         ;
     };
   };

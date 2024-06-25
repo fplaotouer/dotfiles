@@ -13,11 +13,13 @@
 
   programs = {
     # Essential Tools
+    less.enable = true;
     jq.enable = true;
     sd.enable = true;
     fd.enable = true;
     bat.enable = true;
     lsd.enable = true;
+    bottom.enable = true;
     zoxide.enable = true;
     ripgrep.enable = true;
     # Editors
@@ -33,8 +35,7 @@
     git.enable = true;
     gpg.enable = true;
     curl.enable = true;
-    coreutils.enable = true;
-    password-store.enable = true;
+    # home-manager
     home-manager.enable = true;
   };
 
