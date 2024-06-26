@@ -5,7 +5,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable-small";
-    nixpkgs-stable.url = "nixpkgs/nixos-23.11-small";
+    nixpkgs-stable.url = "nixpkgs/nixos-24.05-small";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -40,7 +40,7 @@
     })
     // {
       overlays = {
-        neovimNightlyOverlay = neovim-nightly-overlay.overlay;
+        neovimNightlyOverlay = neovim-nightly-overlay.overlays.default;
         # Extra channel
         nixpkgsStable = final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};};
       };
@@ -48,9 +48,7 @@
       darwinConfigurations.pangz = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
-          ./modules
           ./modules/darwin
-          ./modules/users/pangz
           ./profiles/pangz/configuration.nix
           home-manager.darwinModule
           {

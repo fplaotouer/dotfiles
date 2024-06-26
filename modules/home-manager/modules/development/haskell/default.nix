@@ -19,8 +19,11 @@
     packages = builtins.attrValues {
       inherit
         (pkgs.haskellPackages)
+        hoogle
         stylish-haskell
-        cabal-fmt
+        cabal-gild
+        fast-tags
+        hlint
         ;
     };
   };

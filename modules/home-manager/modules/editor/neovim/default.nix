@@ -24,7 +24,6 @@ in {
     };
 
     programs.neovim = {
-      package = pkgs.neovim-nightly;
       vimAlias = true;
       extraLuaPackages = luaPkgs: with luaPkgs; [luautf8];
       extraPython3Packages = pyPkgs: with pyPkgs; [pynvim];

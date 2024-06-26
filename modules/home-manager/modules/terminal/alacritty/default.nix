@@ -31,9 +31,6 @@
           family = "IosevkaTerm Nerd Font";
           style = "Regular";
         };
-        bold.style = "Bold";
-        italic.style = "Italic";
-        bold_italic.style = "Bold Italic";
       };
       colors = {
         transparent_background_colors = true;

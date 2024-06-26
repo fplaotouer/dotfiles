@@ -54,7 +54,7 @@
         haskell.haskell
         justusadam.language-haskell
         # Rust Pack
-        matklad.rust-analyzer
+        rust-lang.rust-analyzer
         tamasfe.even-better-toml
         serayuzgur.crates
         # Ziglang
@@ -66,6 +66,8 @@
         # Python
         ms-python.python
         charliermarsh.ruff
+        # Tailwind CSS
+        bradlc.vscode-tailwindcss
         # Yaml
         redhat.vscode-yaml
         # XML
