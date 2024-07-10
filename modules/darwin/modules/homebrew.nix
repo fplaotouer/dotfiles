@@ -27,7 +27,12 @@
       brews = [
       ];
       casks = [
+        "iina"
+        "appcleaner"
+        "the-unarchiver"
+        "jetbrains-toolbox"
         "alacritty"
+        "chatgpt"
         "mullvadvpn@beta"
       ];
     };
