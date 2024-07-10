@@ -27,10 +27,8 @@
       "ninja"
     ];
     casks = [
+      "tencent-docs"
       "tencent-meeting"
-      "appcleaner"
-      "the-unarchiver"
-      "hiddenbar"
       "liberica-jdk8-full"
       "liberica-jdk17-full"
     ];

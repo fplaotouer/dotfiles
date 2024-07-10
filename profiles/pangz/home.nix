@@ -17,7 +17,6 @@
     tmux.enable = true;
     # zellij.enable = true;
 
-    mpv.enable = true;
     lazygit.enable = true;
     gitui.enable = true;
     sshpass.enable = true;
