@@ -13,7 +13,6 @@ return {
 			servers = {
 				zls = { mason = false },
 				hls = { mason = false },
-				rust_analyzer = { mason = false },
 				bashls = {},
 				nil_ls = {
 					settings = {

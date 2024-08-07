@@ -13,7 +13,9 @@
     systemPackages = builtins.attrValues {
       inherit
         (pkgs)
+        pkg-config
         ffmpeg
+        ninja
         qemu
         ;
     };

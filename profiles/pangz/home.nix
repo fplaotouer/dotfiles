@@ -11,11 +11,9 @@
 
     deno.enable = true;
     poetry.enable = true;
-    tailwindcss.enable = true;
 
     alacritty.enable = true;
-    tmux.enable = true;
-    # zellij.enable = true;
+    zellij.enable = true;
 
     lazygit.enable = true;
     gitui.enable = true;

@@ -25,7 +25,7 @@ in {
 
     programs.neovim = {
       vimAlias = true;
-      extraLuaPackages = luaPkgs: with luaPkgs; [luautf8];
+      extraLuaPackages = luaPkgs: with luaPkgs; [luarocks luautf8];
       extraPython3Packages = pyPkgs: with pyPkgs; [pynvim];
       extraPackages = [pkgs.luajit pkgs.tree-sitter pkgs.nodePackages.nodejs];
       extraLuaConfig = lib.concatStringsSep "\n" [

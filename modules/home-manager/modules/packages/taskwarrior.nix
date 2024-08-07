@@ -12,6 +12,7 @@ in {
       taskui = "taskwarrior-tui";
     };
     programs.taskwarrior = {
+      package = pkgs.taskwarrior3;
       colorTheme = null;
       config = {};
     };
