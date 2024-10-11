@@ -12,14 +12,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
-    flake-utils.url = "github:numtide/flake-utils";
-
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = {
@@ -27,9 +27,9 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
+    darwin,
     neovim-nightly-overlay,
     flake-utils,
-    darwin,
   }:
     flake-utils.lib.eachDefaultSystem
     (system: {

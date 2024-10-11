@@ -12,7 +12,9 @@
       };
       gitignore = "curl -sL https://www.gitignore.io/api/$argv";
     };
-    shellAbbrs = {};
+    shellAbbrs = {
+      v = "nvim";
+    };
     loginShellInit = ''
       ### fish PATH reorder workaround: https://github.com/LnL7/nix-darwin/issues/122
       # Add nix binary paths to the PATH

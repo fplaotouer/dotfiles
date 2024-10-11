@@ -6,10 +6,10 @@
 }: {
   environment.systemPath = lib.mkAfter [
     # Java
-    "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home/bin"
+    "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin"
   ];
   environment.variables = {
-    JAVA_HOME = "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home";
+    JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home";
   };
   homebrew = {
     enable = true;
@@ -18,19 +18,16 @@
       "bell-sw/liberica"
     ];
     brews = [
-      "lux"
       "coursier"
       "maven"
       "gradle"
-      "xmake"
-      "cmake"
-      "ninja"
     ];
     casks = [
+      "docker"
       "tencent-docs"
       "tencent-meeting"
       "liberica-jdk8-full"
-      "liberica-jdk17-full"
+      "temurin@17"
     ];
   };
 }

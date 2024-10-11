@@ -1,6 +1,8 @@
 {...}: {
   imports = [
-    ./..
+    ./../common
     ./modules
   ];
+
+  config = {};
 }
