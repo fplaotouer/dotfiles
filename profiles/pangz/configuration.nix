@@ -4,13 +4,23 @@
   pkgs,
   ...
 }: {
-  environment.systemPath = lib.mkAfter [
-    # Java
-    "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin"
-  ];
-  environment.variables = {
-    JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home";
+  environment = {
+    systemPackages = builtins.attrValues {
+      inherit
+        (pkgs)
+        xmake
+        ;
+    };
+    systemPath = lib.mkAfter [
+      # Java
+      "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin"
+    ];
+    variables = {
+      # Java Home
+      JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home";
+    };
   };
+
   homebrew = {
     enable = true;
     taps = [
