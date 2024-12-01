@@ -6,8 +6,10 @@
 }: {
   programs.alacritty = {
     settings = {
-      live_config_reload = true;
-      import = [];
+      general = {
+        live_config_reload = true;
+        import = [];
+      };
       env = {};
       window = {
         option_as_alt = "OnlyLeft";
@@ -84,14 +86,16 @@
           blinking = "Off";
         };
       };
-      shell = {
-        program = "${pkgs.fish}/bin/fish";
-        args = [
-          "--login"
-          "-c"
-          "zellij --layout compact attach --index 0 --create"
-          # "tmux attach || tmux"
-        ];
+      terminal = {
+        shell = {
+          program = "${pkgs.fish}/bin/fish";
+          args = [
+            "--login"
+            "-c"
+            "zellij --layout compact attach --index 0 --create"
+            # "tmux attach || tmux"
+          ];
+        };
       };
       mouse = {
         hide_when_typing = false;

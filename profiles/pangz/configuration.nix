@@ -4,13 +4,14 @@
   pkgs,
   ...
 }: {
-  environment.systemPath = lib.mkAfter [
-    # Java
-    "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin"
-  ];
-  environment.variables = {
-    JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home";
+  environment = {
+    systemPackages = builtins.attrValues {
+      inherit
+        (pkgs)
+        ;
+    };
   };
+
   homebrew = {
     enable = true;
     taps = [
@@ -21,13 +22,13 @@
       "coursier"
       "maven"
       "gradle"
+      "xmake"
     ];
     casks = [
       "docker"
       "tencent-docs"
       "tencent-meeting"
       "liberica-jdk8-full"
-      "temurin@17"
     ];
   };
 }

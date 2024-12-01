@@ -9,7 +9,6 @@
       inherit
         (pkgs)
         iina
-        xmake
         ;
     };
   };
