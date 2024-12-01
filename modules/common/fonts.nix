@@ -6,14 +6,8 @@
 }: {
   fonts = {
     packages = [
-      (
-        pkgs.nerdfonts.override {
-          fonts = [
-            "Iosevka"
-            "JetBrainsMono"
-          ];
-        }
-      )
+      pkgs.nerd-fonts.iosevka
+      pkgs.nerd-fonts.jetbrains-mono
     ];
   };
 }

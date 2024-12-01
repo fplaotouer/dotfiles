@@ -52,12 +52,13 @@
           ./profiles/pangz/configuration.nix
           home-manager.darwinModule
           {
+            nix.registry.n.flake = self;
+            nixpkgs.overlays = builtins.attrValues self.overlays;
+
             home-manager.users.pangz = {
               imports = [./profiles/pangz/home.nix];
             };
-            nixpkgs.overlays = builtins.attrValues self.overlays;
             nix = {
-              registry.n.flake = self;
               nixPath = [
                 {nixpkgs = nixpkgs;}
               ];
@@ -78,10 +79,13 @@
               ./modules/home-manager
               ./profiles/minimal/home.nix
               {
-                home.username = "pangz";
-                home.homeDirectory = "/home/pangz";
-                nixpkgs.overlays = builtins.attrValues self.overlays;
                 nix.registry.n.flake = self;
+                nixpkgs.overlays = builtins.attrValues self.overlays;
+
+                home = {
+                  username = "pangz";
+                  homeDirectory = "/home/pangz";
+                };
               }
             ];
           };

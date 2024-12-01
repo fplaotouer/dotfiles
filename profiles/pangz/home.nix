@@ -11,6 +11,7 @@
 
     alacritty.enable = true;
     zellij.enable = true;
+    yazi.enable = true;
 
     hledger.enable = true;
     taskwarrior.enable = true;
