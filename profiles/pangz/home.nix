@@ -11,7 +11,6 @@
 
     alacritty.enable = true;
     zellij.enable = true;
-    yazi.enable = true;
 
     hledger.enable = true;
     taskwarrior.enable = true;
@@ -38,14 +37,6 @@
     icdiff.enable = true;
     wget.enable = true;
 
-    ssh = {
-      matchBlocks = {
-        "github.com" = {
-          hostname = "ssh.github.com";
-          port = 443;
-        };
-      };
-    };
     git = {
       userName = "Pangz Feng";
       userEmail = "43704063+fplaotouer@users.noreply.github.com";

@@ -21,6 +21,7 @@
     fd.enable = true;
     bat.enable = true;
     lsd.enable = true;
+    yazi.enable = true;
     bottom.enable = true;
     zoxide.enable = true;
     ripgrep.enable = true;
