@@ -15,11 +15,9 @@
   homebrew = {
     enable = true;
     taps = [
-      "coursier/formulas"
       "bell-sw/liberica"
     ];
     brews = [
-      "coursier"
       "maven"
       "gradle"
       "xmake"

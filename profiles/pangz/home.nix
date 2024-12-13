@@ -12,11 +12,12 @@
     alacritty.enable = true;
     zellij.enable = true;
 
-    hledger.enable = true;
     taskwarrior.enable = true;
 
+    deno.enable = true;
     poetry.enable = true;
 
+    alejandra.enable = true;
     lazygit.enable = true;
     gitui.enable = true;
     sshpass.enable = true;
@@ -24,7 +25,6 @@
     ouch.enable = true;
     slides.enable = true;
     tokei.enable = true;
-    tshark.enable = true;
     tealdeer.enable = true;
     du-dust.enable = true;
     procs.enable = true;
@@ -34,7 +34,6 @@
     just-cli.enable = true;
     neofetch.enable = true;
     fzf.enable = true;
-    icdiff.enable = true;
     wget.enable = true;
 
     git = {

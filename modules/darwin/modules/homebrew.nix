@@ -35,9 +35,9 @@
       brews = [
       ];
       casks = [
+        "iina"
         "appcleaner"
         "the-unarchiver"
-        "vmware-fusion"
         "temurin@17"
         "jetbrains-toolbox"
         "alacritty"
