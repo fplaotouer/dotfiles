@@ -3,8 +3,6 @@
   pkgs,
   ...
 }: {
-  home.sessionPath = ["${config.home.homeDirectory}/Library/Application Support/Coursier/bin"];
-
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
@@ -15,7 +13,7 @@
     taskwarrior.enable = true;
 
     deno.enable = true;
-    poetry.enable = true;
+    uv.enable = true;
 
     alejandra.enable = true;
     lazygit.enable = true;
@@ -33,7 +31,6 @@
     direnv.enable = true;
     just-cli.enable = true;
     neofetch.enable = true;
-    fzf.enable = true;
     wget.enable = true;
 
     git = {

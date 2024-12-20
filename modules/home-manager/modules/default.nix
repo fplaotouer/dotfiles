@@ -16,6 +16,7 @@
   programs = {
     # Essential Tools
     less.enable = true;
+    fzf.enable = true;
     jq.enable = true;
     sd.enable = true;
     fd.enable = true;
