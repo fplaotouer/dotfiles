@@ -24,6 +24,7 @@
     ];
     casks = [
       "docker"
+      "mullvad-browser"
       "tencent-docs"
       "tencent-meeting"
       "liberica-jdk8-full"
