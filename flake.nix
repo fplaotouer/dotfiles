@@ -50,7 +50,7 @@
         modules = [
           ./modules/darwin
           ./profiles/pangz/configuration.nix
-          home-manager.darwinModule
+          home-manager.darwinModules.home-manager
           {
             nix.registry.n.flake = self;
             nixpkgs.overlays = builtins.attrValues self.overlays;

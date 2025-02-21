@@ -11,9 +11,11 @@
     zellij.enable = true;
 
     taskwarrior.enable = true;
+    hledger.enable = true;
 
     deno.enable = true;
     uv.enable = true;
+    fnm.enable = true;
 
     alejandra.enable = true;
     lazygit.enable = true;

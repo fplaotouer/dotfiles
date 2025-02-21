@@ -65,14 +65,6 @@
           cyan = "#8ec07c";
           white = "#fbf1c7";
         };
-        # indexed_colors = [
-        #   { index = 16; color = "#fe8019"; }
-        #   { index = 17; color = "#d65d0e"; }
-        #   { index = 18; color = "#3c3836"; }
-        #   { index = 19; color = "#504945"; }
-        #   { index = 20; color = "#bdae93"; }
-        #   { index = 21; color = "#ebdbb2"; }
-        # ];
       };
       selection = {
         save_to_clipboard = true;

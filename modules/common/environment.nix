@@ -9,6 +9,8 @@
       "/share/zsh"
       "/share/bash-completion"
       "/share/qemu"
+      "/share/xdg-desktop-portal"
+      "/share/applications"
     ];
     systemPackages = builtins.attrValues {
       inherit

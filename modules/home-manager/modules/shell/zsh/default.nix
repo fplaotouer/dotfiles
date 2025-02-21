@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  home.file."${config.xdg.stateHome}/zsh/.keep".text = "";
+  xdg.stateFile."zsh/.keep".text = "";
   programs.zsh = {
     autocd = true;
     autosuggestion.enable = true;

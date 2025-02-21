@@ -11,7 +11,12 @@
   in
     map (name: ./. + "/${name}") modules;
 
-  xdg.enable = true;
+  xdg = {
+    enable = true;
+    stateFile = {
+      ".keep".text = "";
+    };
+  };
 
   programs = {
     # Essential Tools
@@ -45,9 +50,6 @@
   };
 
   home = {
-    file = {
-      "${config.xdg.stateHome}/.keep".text = "";
-    };
     language.base = "en_US.UTF-8";
     stateVersion = "22.11";
     enableNixpkgsReleaseCheck = true;
