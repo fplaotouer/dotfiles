@@ -12,7 +12,15 @@ in {
 
   config = lib.mkIf (cfg.enable) {
     home = {
-      packages = [pkgs.hledger pkgs.hledger-ui pkgs.hledger-web];
+      packages = builtins.attrValues {
+        inherit
+          (pkgs)
+          hledger
+          hledger-iadd
+          hledger-ui
+          hledger-web
+          ;
+      };
       file.".hledger/declaration.journal".source = ./declaration.journal;
       shellAliases = {
         hl = "hledger";

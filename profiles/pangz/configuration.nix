@@ -23,6 +23,7 @@
       "xmake"
     ];
     casks = [
+      "bilibili"
       "docker"
       "mullvad-browser"
       "tencent-docs"
