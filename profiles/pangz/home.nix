@@ -3,12 +3,13 @@
   pkgs,
   ...
 }: {
+  services.ollama.enable = true;
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
 
     alacritty.enable = true;
-    zellij.enable = true;
+    # zellij.enable = true;
 
     taskwarrior.enable = true;
     hledger.enable = true;

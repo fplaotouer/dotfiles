@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.alacritty = {
     settings = {
       general = {
@@ -83,9 +78,8 @@
           program = "${pkgs.fish}/bin/fish";
           args = [
             "--login"
-            "-c"
-            "zellij --layout compact attach --index 0 --create"
-            # "tmux attach || tmux"
+            # "-c"
+            # "zellij --layout compact attach --index 0 --create"
           ];
         };
       };
