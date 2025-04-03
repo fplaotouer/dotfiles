@@ -6,15 +6,7 @@
 }: {
   config = lib.mkIf (config.homebrew.enable) {
     environment = {
-      systemPath = lib.mkAfter [
-        "${config.homebrew.brewPrefix}"
-        # Java
-        "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin"
-      ];
-      variables = {
-        # Java Home
-        JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home";
-      };
+      systemPath = lib.mkAfter ["${config.homebrew.brewPrefix}"];
     };
     homebrew = {
       global = {
@@ -28,20 +20,10 @@
         autoUpdate = false;
         upgrade = false;
       };
-      taps = [
-        "homebrew/bundle"
-        "homebrew/services"
-      ];
-      brews = [
-      ];
       casks = [
-        "iina"
-        "appcleaner"
-        "the-unarchiver"
-        "temurin@17"
-        "jetbrains-toolbox"
         "alacritty"
-        "chatgpt"
+        "iina"
+        "the-unarchiver"
         "mullvadvpn@beta"
       ];
     };

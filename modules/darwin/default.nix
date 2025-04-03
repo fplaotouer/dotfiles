@@ -11,5 +11,6 @@
         use-case-hack = true;
       };
     };
+    system.stateVersion = 6;
   };
 }

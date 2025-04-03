@@ -13,6 +13,4 @@
       ./../home-manager/modules
     ];
   };
-
-  system.stateVersion = 4;
 }

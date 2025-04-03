@@ -51,7 +51,7 @@
 
   home = {
     language.base = "en_US.UTF-8";
-    stateVersion = "22.11";
+    stateVersion = "25.05";
     enableNixpkgsReleaseCheck = true;
     extraOutputsToInstall = [
       "doc"
