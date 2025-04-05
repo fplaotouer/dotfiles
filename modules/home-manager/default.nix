@@ -4,8 +4,8 @@
   ...
 }: {
   imports = [
-    ./../common/nixConf.nix
-    ./../common/nixpkgs.nix
+    ./nixConf.nix
+    ./nixpkgs.nix
     ./modules
   ];
 }

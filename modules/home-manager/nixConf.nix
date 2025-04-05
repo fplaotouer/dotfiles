@@ -16,9 +16,6 @@
     registry = {
       n.flake = self;
     };
-    optimise = {
-      automatic = true;
-    };
     gc = {
       automatic = true;
       options = "--delete-older-than 2d";

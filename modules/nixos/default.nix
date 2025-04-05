@@ -1,10 +1,13 @@
-{...}: {
+{
+  lib,
+  self,
+  ...
+}: {
   imports = [
+    self.inputs.home-manager.nixosModules.home-manager
     ./../common
     ./modules
   ];
 
-  config = {
-    system.stateVersion = "25.05";
-  };
+  system.stateVersion = lib.mkDefault "25.05";
 }

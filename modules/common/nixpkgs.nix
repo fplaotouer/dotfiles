@@ -1,12 +1,14 @@
 {
   lib,
-  config,
-  pkgs,
+  self,
   ...
 }: {
-  nixpkgs.config = {
-    allowUnfreePredicate = pkg:
-      builtins.elem (lib.getName pkg) [
-      ];
+  nixpkgs = {
+    overlays = self.overlays;
+    config = {
+      allowUnfreePredicate = pkg:
+        builtins.elem (lib.getName pkg) [
+        ];
+    };
   };
 }
