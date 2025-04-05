@@ -45,13 +45,16 @@
     git.enable = true;
     gpg.enable = true;
     curl.enable = true;
+    password-store.enable = true;
     # home-manager
     home-manager.enable = true;
   };
 
   home = {
+    username = lib.mkDefault (import ./../../../users/pangz/pangz.nix {inherit pkgs;}).home.username;
+    homeDirectory = lib.mkDefault (import ./../../../users/pangz/pangz.nix {inherit pkgs;}).home.homeDirectory;
     language.base = "en_US.UTF-8";
-    stateVersion = "25.05";
+    stateVersion = lib.mkDefault "25.05";
     enableNixpkgsReleaseCheck = true;
     extraOutputsToInstall = [
       "doc"

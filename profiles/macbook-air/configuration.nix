@@ -4,6 +4,15 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./../../modules/darwin
+    ./hardware-configuration.nix
+    ./../../users/pangz
+  ];
+
+  home-manager.users.pangz = {
+    imports = [./home.nix];
+  };
   environment = {
     systemPackages = builtins.attrValues {
       inherit
@@ -26,21 +35,23 @@
       "bell-sw/liberica"
     ];
     brews = [
-      "maven"
-      "gradle"
       "xmake"
+      "gradle"
+      "maven"
     ];
     casks = [
-      "bilibili"
+      "mullvad-browser"
+      "jetbrains-toolbox"
+      "vmware-fusion"
+      "temurin@17"
+      "the-unarchiver"
+      "appcleaner"
+      "iina"
       "docker"
       "tencent-docs"
       "tencent-meeting"
       "liberica-jdk8-full"
-      "appcleaner"
-      "temurin@17"
-      "vmware-fusion"
-      "mullvad-browser"
-      "jetbrains-toolbox"
+      "bilibili"
     ];
   };
 }
