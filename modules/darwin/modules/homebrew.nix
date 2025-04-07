@@ -24,7 +24,7 @@
       };
       casks = [
         "mullvadvpn@beta"
-        "alacritty"
+        "ghostty"
       ];
     };
   };
