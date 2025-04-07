@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   programs.alacritty = {
+    package = null;
     settings = {
       general = {
         live_config_reload = true;

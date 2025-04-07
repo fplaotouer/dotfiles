@@ -4,17 +4,14 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable-small";
     nixpkgs-stable.url = "nixpkgs/nixos-24.11-small";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     flake-utils.url = "github:numtide/flake-utils";

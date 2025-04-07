@@ -7,7 +7,7 @@
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
 
-    alacritty.enable = true;
+    ghostty.enable = true;
 
     taskwarrior.enable = true;
     hledger.enable = true;
