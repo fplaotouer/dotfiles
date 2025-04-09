@@ -42,7 +42,6 @@
     casks = [
       "mullvad-browser"
       "jetbrains-toolbox"
-      "vmware-fusion"
       "temurin@17"
       "the-unarchiver"
       "appcleaner"

@@ -32,16 +32,16 @@
     (system: {
       legacyPackages = import nixpkgs {
         inherit system;
-        overlays = self.overlays;
+        overlays = builtins.attrValues self.overlays;
       };
     })
     // {
       inherit lib;
-      overlays = [
-        neovim-nightly-overlay.overlays.default
+      overlays = {
+        neovimNightlyOverlay = neovim-nightly-overlay.overlays.default;
         # Extra channel
-        (final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};})
-      ];
+        nixpkgsStable = final: prev: {stablePkgs = nixpkgs-stable.legacyPackages.${prev.system};};
+      };
 
       darwinConfigurations = {
         macmini = lib.darwinSystem {

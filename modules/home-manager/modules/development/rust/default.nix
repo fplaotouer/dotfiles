@@ -5,9 +5,6 @@
   ...
 }: let
   userCargoConfig = {
-    build = {
-      rustc-wrapper = "${pkgs.sccache}/bin/sccache";
-    };
     registry.default = "crates-io";
     registries.crates-io.protocol = "sparse";
     source = {
@@ -27,15 +24,6 @@ in {
       RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
     };
     sessionPath = ["${config.xdg.dataHome}/cargo/bin"];
-    packages = builtins.attrValues {
-      inherit
-        (pkgs)
-        lldb
-        lld
-        sccache
-        graphviz
-        ;
-    };
   };
 
   xdg.dataFile."cargo/config.toml" = lib.mkIf (userCargoConfig != {}) {
