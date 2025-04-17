@@ -37,7 +37,11 @@ in {
     systemPackages = builtins.attrValues {
       inherit ghcWithPkgs hls;
       inherit (pkgs) zig zls;
-      inherit (pkgs) qemu;
+      inherit
+        (pkgs)
+        qemu
+        tcpdump
+        ;
     };
   };
 }

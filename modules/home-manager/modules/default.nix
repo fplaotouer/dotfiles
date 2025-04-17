@@ -19,7 +19,10 @@
   };
 
   programs = {
+    # Just Configurations
+    ghostty.enable = true;
     # Essential Tools
+    wget.enable = true;
     less.enable = true;
     fzf.enable = true;
     jq.enable = true;
