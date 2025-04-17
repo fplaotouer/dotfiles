@@ -8,8 +8,6 @@
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
 
-    ghostty.enable = true;
-
     taskwarrior.enable = true;
     hledger.enable = true;
 
@@ -33,7 +31,6 @@
     direnv.enable = true;
     just-cli.enable = true;
     neofetch.enable = true;
-    wget.enable = true;
 
     git = {
       userName = "Pangz Feng";

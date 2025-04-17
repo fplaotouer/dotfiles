@@ -25,6 +25,7 @@
       casks = [
         "mullvadvpn@beta"
         "ghostty"
+        "lulu"
       ];
     };
   };

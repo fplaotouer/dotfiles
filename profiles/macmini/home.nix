@@ -7,23 +7,8 @@
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
 
-    ghostty.enable = true;
-
-    taskwarrior.enable = true;
-    hledger.enable = true;
-
-    deno.enable = true;
-    uv.enable = true;
-    fnm.enable = true;
-
-    alejandra.enable = true;
-    lazygit.enable = true;
-    gitui.enable = true;
-    sshpass.enable = true;
     dufs.enable = true;
     ouch.enable = true;
-    slides.enable = true;
-    tokei.enable = true;
     tealdeer.enable = true;
     du-dust.enable = true;
     procs.enable = true;
@@ -32,7 +17,6 @@
     direnv.enable = true;
     just-cli.enable = true;
     neofetch.enable = true;
-    wget.enable = true;
 
     git = {
       userName = "Pangz Feng";
