@@ -47,7 +47,6 @@
       "appcleaner"
       "iina"
       "docker"
-      "tencent-docs"
       "tencent-meeting"
       "liberica-jdk8-full"
       "bilibili"

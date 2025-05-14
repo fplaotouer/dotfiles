@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  ghcVersion = "96";
+  ghcVersion = "98";
   hls = pkgs.haskell-language-server.override {
     dynamic = true;
     supportedGhcVersions = [ghcVersion];
@@ -18,9 +18,7 @@
           cabal-install
           hoogle
           # tools
-          cabal2nix
           cabal-gild
-          stylish-haskell
           fast-tags
           hlint
         ]

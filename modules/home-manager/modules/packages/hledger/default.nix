@@ -18,7 +18,7 @@ in {
           hledger
           hledger-iadd
           hledger-ui
-          hledger-web
+          # hledger-web
           ;
       };
       file.".hledger/declaration.journal".source = ./declaration.journal;
