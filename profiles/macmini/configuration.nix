@@ -13,6 +13,7 @@
   home-manager.users.pangz = {
     imports = [./home.nix];
   };
+  system.primaryUser = "pangz";
 
   homebrew = {
     enable = true;

@@ -3,7 +3,6 @@
   pkgs,
   ...
 }: {
-  services.ollama.enable = true;
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
