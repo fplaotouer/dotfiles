@@ -23,7 +23,7 @@
         upgrade = false;
       };
       casks = [
-        "mullvadvpn@beta"
+        "mullvad-vpn@beta"
         "ghostty"
         "lulu"
       ];

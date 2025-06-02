@@ -13,6 +13,8 @@
   home-manager.users.pangz = {
     imports = [./home.nix];
   };
+  system.primaryUser = "pangz";
+
   environment = {
     systemPackages = builtins.attrValues {
       inherit
