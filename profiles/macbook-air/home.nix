@@ -12,7 +12,6 @@
 
     deno.enable = true;
     uv.enable = true;
-    fnm.enable = true;
 
     alejandra.enable = true;
     lazygit.enable = true;
@@ -20,7 +19,6 @@
     sshpass.enable = true;
     dufs.enable = true;
     ouch.enable = true;
-    slides.enable = true;
     tokei.enable = true;
     tealdeer.enable = true;
     du-dust.enable = true;
