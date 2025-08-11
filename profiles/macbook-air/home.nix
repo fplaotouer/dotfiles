@@ -10,7 +10,6 @@
     taskwarrior.enable = true;
     hledger.enable = true;
 
-    deno.enable = true;
     uv.enable = true;
 
     alejandra.enable = true;

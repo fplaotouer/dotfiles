@@ -7,10 +7,6 @@
   userCargoConfig = {
     registry.default = "crates-io";
     registries.crates-io.protocol = "sparse";
-    source = {
-      rsproxy.registry = "https://rsproxy.cn/crates.io-index";
-      rsproxy-sparse.registry = "sparse+https://rsproxy.cn/index/";
-    };
     net = {
       git-fetch-with-cli = true;
     };
