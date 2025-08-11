@@ -48,7 +48,6 @@
       "the-unarchiver"
       "appcleaner"
       "iina"
-      "docker"
       "tencent-meeting"
       "liberica-jdk8-full"
       "bilibili"
