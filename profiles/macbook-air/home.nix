@@ -26,7 +26,6 @@
     xdg-utils.enable = true;
     direnv.enable = true;
     just-cli.enable = true;
-    neofetch.enable = true;
 
     git = {
       userName = "Pangz Feng";
