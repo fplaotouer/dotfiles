@@ -23,11 +23,11 @@
     };
     systemPath = lib.mkAfter [
       # Java
-      "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin"
+      "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home/bin"
     ];
     variables = {
       # Java Home
-      JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home";
+      JAVA_HOME = "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home";
     };
   };
 
@@ -44,7 +44,7 @@
     casks = [
       "mullvad-browser"
       "jetbrains-toolbox"
-      "temurin@17"
+      "liberica-jdk17-full"
       "the-unarchiver"
       "appcleaner"
       "iina"
