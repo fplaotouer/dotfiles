@@ -6,6 +6,7 @@
 }: {
   programs.ssh = {
     package = null;
+    enableDefaultConfig = false;
     matchBlocks = {
       "*" = {
         forwardAgent = false;
