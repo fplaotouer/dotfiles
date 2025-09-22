@@ -5,7 +5,7 @@
     enableFishIntegration = true;
     enableZshIntegration = true;
     settings = {
-      theme = "GruvboxDark";
+      theme = "Gruvbox Dark";
       font-family = "Iosevka Nerd Font Mono";
       font-size = 16;
       command = "${pkgs.fish}/bin/fish --login";
