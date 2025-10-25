@@ -37,9 +37,14 @@ in {
       inherit (pkgs) zig zls;
       inherit
         (pkgs)
+        nasm
+        lld
+        lldb
+        libllvm
+        ninja
+        tcpdump
         ffmpeg
         qemu
-        tcpdump
         llama-cpp
         ;
     };
