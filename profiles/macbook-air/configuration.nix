@@ -19,6 +19,7 @@
     systemPackages = builtins.attrValues {
       inherit
         (pkgs)
+        zed-editor
         ;
     };
     systemPath = lib.mkAfter [
@@ -50,7 +51,6 @@
       "iina"
       "tencent-meeting"
       "liberica-jdk8-full"
-      "bilibili"
     ];
   };
 }

@@ -18,10 +18,12 @@
     just-cli.enable = true;
 
     git = {
-      userName = "Pangz Feng";
-      userEmail = "43704063+fplaotouer@users.noreply.github.com";
-      extraConfig = {
+      settings = {
         github.user = "fplaotouer";
+        user = {
+          name = "Pangz Feng";
+          email = "43704063+fplaotouer@users.noreply.github.com";
+        };
       };
     };
   };

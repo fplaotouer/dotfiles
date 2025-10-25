@@ -6,6 +6,10 @@
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
+    zed-editor = {
+      enable = true;
+      package = null;
+    };
 
     taskwarrior.enable = true;
     hledger.enable = true;
@@ -13,8 +17,6 @@
     uv.enable = true;
 
     alejandra.enable = true;
-    lazygit.enable = true;
-    gitui.enable = true;
     sshpass.enable = true;
     dufs.enable = true;
     ouch.enable = true;
@@ -28,10 +30,12 @@
     just-cli.enable = true;
 
     git = {
-      userName = "Pangz Feng";
-      userEmail = "43704063+fplaotouer@users.noreply.github.com";
-      extraConfig = {
+      settings = {
         github.user = "fplaotouer";
+        user = {
+          name = "Pangz Feng";
+          email = "43704063+fplaotouer@users.noreply.github.com";
+        };
       };
     };
   };
