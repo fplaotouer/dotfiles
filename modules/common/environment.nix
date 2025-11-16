@@ -1,29 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: let
-  ghcVersion = "98";
-  hls = pkgs.haskell-language-server.override {
-    dynamic = true;
-    supportedGhcVersions = [ghcVersion];
-  };
-  ghcWithPkgs =
-    pkgs.haskell.packages."ghc${ghcVersion}".ghcWithPackages
-    (
-      haskellPackages:
-        with haskellPackages; [
-          # toolchains
-          cabal-install
-          hoogle
-          # tools
-          cabal-gild
-          fast-tags
-          hlint
-        ]
-    );
-in {
+{pkgs, ...}: {
   environment = {
     pathsToLink = [
       "/share/zsh"
@@ -33,20 +8,9 @@ in {
       "/share/applications"
     ];
     systemPackages = builtins.attrValues {
-      inherit ghcWithPkgs hls;
+      inherit (pkgs) libllvm lld lldb clang-tools;
+      inherit (pkgs) nasm qemu ninja curl ffmpeg;
       inherit (pkgs) zig zls;
-      inherit
-        (pkgs)
-        nasm
-        lld
-        lldb
-        libllvm
-        ninja
-        tcpdump
-        ffmpeg
-        qemu
-        llama-cpp
-        ;
     };
   };
 }

@@ -6,10 +6,6 @@
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
-    zed-editor = {
-      enable = true;
-      package = null;
-    };
 
     taskwarrior.enable = true;
     hledger.enable = true;
@@ -22,7 +18,7 @@
     ouch.enable = true;
     tokei.enable = true;
     tealdeer.enable = true;
-    du-dust.enable = true;
+    dust.enable = true;
     procs.enable = true;
     navi.enable = true;
     xdg-utils.enable = true;

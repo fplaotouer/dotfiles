@@ -4,13 +4,13 @@
   pkgs,
   ...
 }: let
-  cfg = config.programs.du-dust;
+  cfg = config.programs.dust;
 in {
-  options.programs.du-dust = {
+  options.programs.dust = {
     enable = lib.mkEnableOption "A more intuitive version of du in rust";
   };
 
   config = lib.mkIf (cfg.enable) {
-    home.packages = [pkgs.du-dust];
+    home.packages = [pkgs.dust];
   };
 }

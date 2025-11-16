@@ -5,12 +5,11 @@
 }: {
   programs = {
     neovim.defaultEditor = true;
-    neovim.lazyVim = true;
 
     dufs.enable = true;
     ouch.enable = true;
     tealdeer.enable = true;
-    du-dust.enable = true;
+    dust.enable = true;
     procs.enable = true;
     navi.enable = true;
     xdg-utils.enable = true;
