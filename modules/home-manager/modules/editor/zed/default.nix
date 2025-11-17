@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   programs.zed-editor = {
+    package = null;
     extensions = ["haskell" "zig" "toml"];
     userSettings = {
       vim_mode = true;

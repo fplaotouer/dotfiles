@@ -23,7 +23,6 @@
         upgrade = false;
       };
       casks = [
-        "ghostty"
         "lulu"
       ];
     };

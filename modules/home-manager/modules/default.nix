@@ -1,6 +1,5 @@
 {
   lib,
-  config,
   pkgs,
   ...
 }: {
@@ -19,7 +18,8 @@
   };
 
   programs = {
-    # Just Configurations
+    # Configurations
+    zed-editor.enable = true;
     ghostty.enable = true;
     # Essential Tools
     wget.enable = true;
@@ -47,7 +47,6 @@
     ssh.enable = true;
     git.enable = true;
     gpg.enable = true;
-    curl.enable = true;
     password-store.enable = true;
     # home-manager
     home-manager.enable = true;

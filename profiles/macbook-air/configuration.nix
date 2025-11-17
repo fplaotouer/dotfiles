@@ -43,7 +43,6 @@
       "maven"
     ];
     casks = [
-      "mullvad-browser"
       "jetbrains-toolbox"
       "liberica-jdk17-full"
       "the-unarchiver"
