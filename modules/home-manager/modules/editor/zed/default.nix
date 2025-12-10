@@ -9,6 +9,9 @@
       features = {
         edit_prediction_provider = "none";
       };
+      project_panel = {
+        hide_hidden = true;
+      };
       title_bar = {
         show_sign_in = false;
       };

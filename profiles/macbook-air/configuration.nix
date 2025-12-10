@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{lib, ...}: {
   imports = [
     ./../../modules/darwin
     ./hardware-configuration.nix
@@ -16,12 +11,9 @@
   system.primaryUser = "pangz";
 
   environment = {
-    systemPackages = builtins.attrValues {
-      inherit
-        (pkgs)
-        zed-editor
-        ;
-    };
+    systemPackages =
+      builtins.attrValues {
+      };
     systemPath = lib.mkAfter [
       # Java
       "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home/bin"

@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
