@@ -1,10 +1,9 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }: {
-  config = lib.mkIf (config.homebrew.enable) {
+  config = lib.mkIf config.homebrew.enable {
     environment = {
       systemPath = lib.mkAfter ["${config.homebrew.brewPrefix}"];
     };
