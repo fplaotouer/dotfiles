@@ -9,12 +9,7 @@
     ./modules
   ];
 
-  nix = {
-    settings = {
-      sandbox = false;
-      use-case-hack = true;
-    };
-  };
+  nix.settings.use-case-hack = true;
   security.pam.services.sudo_local.touchIdAuth = true;
   system.stateVersion = lib.mkDefault 6;
 }
