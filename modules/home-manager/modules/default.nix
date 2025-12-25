@@ -22,6 +22,7 @@
     zed-editor.enable = true;
     ghostty.enable = true;
     # Essential Tools
+    fastfetch.enable = true;
     wget.enable = true;
     less.enable = true;
     fzf.enable = true;

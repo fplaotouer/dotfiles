@@ -6,6 +6,9 @@
       vim_mode = true;
       disable_ai = true;
       buffer_font_family = "Iosevka Nerd Font Mono";
+      inlay_hints = {
+        enabled = true;
+      };
       features = {
         edit_prediction_provider = "none";
       };
