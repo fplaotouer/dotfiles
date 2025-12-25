@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./../../modules/darwin
     ./hardware-configuration.nix
@@ -12,5 +12,8 @@
 
   homebrew = {
     enable = true;
+    casks = [
+      "parallels"
+    ];
   };
 }

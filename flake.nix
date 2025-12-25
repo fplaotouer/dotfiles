@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable-small";
     nixpkgs-stable.url = "nixpkgs/nixos-25.11-small";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,6 +22,7 @@
     self,
     nixpkgs,
     nixpkgs-stable,
+    nixos-hardware,
     home-manager,
     darwin,
     neovim-nightly-overlay,
