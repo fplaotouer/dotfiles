@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs.ssh = {
     package = null;
     enableDefaultConfig = false;

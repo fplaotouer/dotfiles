@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs.gpg = {
     settings = {};
     scdaemonSettings = {};

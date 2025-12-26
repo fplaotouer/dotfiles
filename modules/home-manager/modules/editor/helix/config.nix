@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs.helix.settings = {
     theme = "gruvbox";
     editor = {

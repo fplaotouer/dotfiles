@@ -5,6 +5,7 @@
     enableFishIntegration = true;
     enableZshIntegration = true;
     settings = {
+      auto-update = "check";
       theme = "Gruvbox Dark";
       font-family = "IosevkaTerm Nerd Font Mono";
       font-size = 16;

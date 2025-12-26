@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   imports = let
     inherit (builtins) readDir attrNames filter map;
     paths = attrNames (readDir ./.);

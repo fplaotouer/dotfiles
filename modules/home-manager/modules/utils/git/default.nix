@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  home.packages = lib.optionals (config.programs.git.enable) [
+  home.packages = lib.optionals config.programs.git.enable [
     pkgs.git-crypt
   ];
   programs = {
@@ -35,13 +35,13 @@
         };
       };
     };
-  };
-  programs.delta = {
-    enable = true;
-    enableGitIntegration = true;
-    options = {
-      line-numbers = true;
-      side-by-side = true;
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
+      options = {
+        line-numbers = true;
+        side-by-side = true;
+      };
     };
   };
 }

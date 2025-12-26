@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "A modern runtime for JavaScript and TypeScript.";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.deno];
   };
 }

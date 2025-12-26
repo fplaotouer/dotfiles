@@ -6,8 +6,10 @@
     taskwarrior.enable = true;
     hledger.enable = true;
 
+    ansible.enable = true;
     uv.enable = true;
 
+    yt-dlp.enable = true;
     alejandra.enable = true;
     sshpass.enable = true;
     dufs.enable = true;
@@ -18,7 +20,6 @@
     procs.enable = true;
     navi.enable = true;
     xdg-utils.enable = true;
-    direnv.enable = true;
     just-cli.enable = true;
 
     git = {

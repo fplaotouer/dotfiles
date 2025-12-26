@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "Fast and simple Node.js version manager";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.fnm];
     xdg.configFile."fish/conf.d/fnm.fish".text = ''
       fnm env --use-on-cd --shell fish | source

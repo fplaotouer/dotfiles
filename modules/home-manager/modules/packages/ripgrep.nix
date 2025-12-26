@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs.ripgrep = {
     arguments = [
       "--max-columns=150"

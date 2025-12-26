@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment = {
     systemPackages = builtins.attrValues {
-      inherit (pkgs) ghostty-bin llama-cpp;
+      inherit (pkgs) llama-cpp;
     };
   };
 }

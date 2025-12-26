@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "A modern replacement for ps written in Rust";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.procs];
   };
 }

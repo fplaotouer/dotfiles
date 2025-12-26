@@ -1,8 +1,4 @@
-{
-  lib,
-  pkgs,
-  ...
-}: {
+{lib, ...}: {
   imports = [
     ./../../modules/darwin
     ./hardware-configuration.nix
@@ -15,14 +11,6 @@
   system.primaryUser = "pangz";
 
   environment = {
-    systemPackages = builtins.attrValues {
-      inherit
-        (pkgs)
-        iina
-        appcleaner
-        the-unarchiver
-        ;
-    };
     systemPath = lib.mkAfter [
       # Java
       "/Library/Java/JavaVirtualMachines/graalvm-17.jdk/Contents/Home/bin"
@@ -36,12 +24,15 @@
   homebrew = {
     enable = true;
     brews = [
-      "xmake"
       "gradle"
       "maven"
     ];
     casks = [
       "jetbrains-toolbox"
+      "the-unarchiver"
+      "appcleaner"
+      "iina"
+      "zed"
       "graalvm-jdk@17"
       "tencent-meeting"
     ];

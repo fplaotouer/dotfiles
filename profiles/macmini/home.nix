@@ -9,7 +9,6 @@
     procs.enable = true;
     navi.enable = true;
     xdg-utils.enable = true;
-    direnv.enable = true;
     just-cli.enable = true;
 
     git = {

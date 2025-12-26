@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "Intuitive find & replace CLI (sed alternative)";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.sd];
   };
 }

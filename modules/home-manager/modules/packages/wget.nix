@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "GNU Wget2 is the successor of GNU Wget, a file and recursive website downloader";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.wget pkgs.wget2];
   };
 }

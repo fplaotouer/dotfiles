@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "A set of command line tools that assist applications with a variety of desktop integration tasks";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.xdg-utils];
   };
 }

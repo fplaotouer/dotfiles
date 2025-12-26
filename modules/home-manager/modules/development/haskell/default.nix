@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   home = {
     sessionVariables = {
       CABAL_DIR = "${config.xdg.dataHome}/cabal";

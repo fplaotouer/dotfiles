@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "Simple and flexible tool for managing secrets";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.sshpass];
   };
 }

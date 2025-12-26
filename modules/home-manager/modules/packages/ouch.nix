@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "Painless compression and decompression for your terminal";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.ouch];
   };
 }
