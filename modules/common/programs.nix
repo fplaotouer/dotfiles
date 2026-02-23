@@ -8,5 +8,8 @@
       enable = true;
       useBabelfish = true;
     };
+    zsh = {
+      enable = true;
+    };
   };
 }

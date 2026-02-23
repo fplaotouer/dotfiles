@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "hledger is fast, reliable, free, multicurrency double-entry accounting software that runs on unix, mac, windows, and the web.";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home = {
       packages = builtins.attrValues {
         inherit
@@ -23,7 +23,7 @@ in {
       };
       file.".hledger/declaration.journal".source = ./declaration.journal;
       shellAliases = {
-        hl = "hledger";
+        hl = "${pkgs.hledger}/bin/hledger";
       };
       sessionVariables = {
         LEDGER_FILE = "$HOME/.hledger/current.journal";

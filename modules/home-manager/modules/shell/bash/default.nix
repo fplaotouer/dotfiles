@@ -1,10 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
-  xdg.stateFile."bash/.keep".text = "";
+{config, ...}: {
   programs.bash = {
     package = null;
     enableCompletion = true;

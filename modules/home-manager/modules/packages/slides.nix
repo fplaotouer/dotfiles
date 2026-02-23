@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "Terminal based presentation tool";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.slides pkgs.graph-easy pkgs.plantuml];
   };
 }

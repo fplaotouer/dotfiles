@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "Resource gathering + programming game";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home = {
       packages = [pkgs.haskellPackages.swarm];
     };

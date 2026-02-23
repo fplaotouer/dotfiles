@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "Powerful network protocol analyzer";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.tshark];
   };
 }

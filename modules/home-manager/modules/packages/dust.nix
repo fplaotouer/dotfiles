@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "A more intuitive version of du in rust";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.dust];
   };
 }

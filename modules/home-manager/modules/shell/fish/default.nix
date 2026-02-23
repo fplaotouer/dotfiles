@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs.fish = {
     functions = {
       __fish_command_not_found_handler = {

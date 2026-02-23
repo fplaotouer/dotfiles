@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "Count your code, quickly.";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.tokei];
   };
 }

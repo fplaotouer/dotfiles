@@ -10,7 +10,7 @@ in {
     enable = lib.mkEnableOption "A network diagnostics tool";
   };
 
-  config = lib.mkIf (cfg.enable) {
+  config = lib.mkIf cfg.enable {
     home.packages = [pkgs.mtr];
   };
 }

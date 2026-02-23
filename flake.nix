@@ -55,13 +55,5 @@
           modules = [./profiles/macbook-air/configuration.nix];
         };
       };
-
-      homeConfigurations = {
-        minimal = lib.homeManagerConfiguration {
-          pkgs = self.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {inherit self;};
-          modules = [./profiles/minimal/home.nix];
-        };
-      };
     };
 }

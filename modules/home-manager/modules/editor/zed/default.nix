@@ -9,6 +9,11 @@
       inlay_hints = {
         enabled = true;
       };
+      diagnostics = {
+        inline = {
+          enabled = true;
+        };
+      };
       features = {
         edit_prediction_provider = "none";
       };

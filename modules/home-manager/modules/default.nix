@@ -22,6 +22,7 @@
     zed-editor.enable = true;
     ghostty.enable = true;
     # Essential Tools
+    direnv.enable = true;
     fastfetch.enable = true;
     wget.enable = true;
     less.enable = true;
@@ -56,11 +57,14 @@
   home = {
     username = lib.mkDefault (import ./../../../users/pangz/pangz.nix {inherit pkgs;}).home.username;
     homeDirectory = lib.mkDefault (import ./../../../users/pangz/pangz.nix {inherit pkgs;}).home.homeDirectory;
+    shell.enableShellIntegration = true;
     sessionPath = ["$HOME/.local/bin"];
     language.base = "en_US.UTF-8";
     stateVersion = lib.mkDefault "25.05";
     enableNixpkgsReleaseCheck = true;
     extraOutputsToInstall = [
+      "lib"
+      "dev"
       "doc"
       "info"
       "devdoc"
