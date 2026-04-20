@@ -1,8 +1,10 @@
 {pkgs, ...}: {
-  programs.yazi.settings = {
+  programs.yazi = {
     shellWrapperName = "y";
-    extraPackages = builtins.attrValues {
-      inherit (pkgs) glow ouch;
+    settings = {
+      extraPackages = builtins.attrValues {
+        inherit (pkgs) glow ouch;
+      };
     };
   };
 }

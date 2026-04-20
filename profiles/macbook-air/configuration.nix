@@ -13,16 +13,19 @@
   environment = {
     systemPath = lib.mkAfter [
       # Java
-      "/Library/Java/JavaVirtualMachines/graalvm-17.jdk/Contents/Home/bin"
+      "/Library/Java/JavaVirtualMachines/liberica-jdk-21.jdk/Contents/Home/bin"
     ];
     variables = {
       # Java Home
-      JAVA_HOME = "/Library/Java/JavaVirtualMachines/graalvm-17.jdk/Contents/Home";
+      JAVA_HOME = "/Library/Java/JavaVirtualMachines/liberica-jdk-21.jdk/Contents/Home";
     };
   };
 
   homebrew = {
     enable = true;
+    taps = [
+      "bell-sw/liberica"
+    ];
     brews = [
       "gradle"
       "maven"
@@ -33,7 +36,8 @@
       "appcleaner"
       "iina"
       "zed"
-      "graalvm-jdk@17"
+      "liberica-jdk21"
+      "docker-desktop"
       "tencent-meeting"
     ];
   };

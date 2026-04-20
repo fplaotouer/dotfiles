@@ -13,9 +13,15 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     flake-utils.url = "github:numtide/flake-utils";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
   outputs = {
@@ -25,8 +31,10 @@
     nixos-hardware,
     home-manager,
     darwin,
-    neovim-nightly-overlay,
     flake-utils,
+    sops-nix,
+    neovim-nightly-overlay,
+    hermes-agent,
   }: let
     lib = nixpkgs.lib // darwin.lib // home-manager.lib;
   in
