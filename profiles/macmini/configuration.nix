@@ -12,8 +12,5 @@
 
   homebrew = {
     enable = true;
-    casks = [
-      "parallels"
-    ];
   };
 }

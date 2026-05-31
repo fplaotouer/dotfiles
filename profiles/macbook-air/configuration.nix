@@ -36,9 +36,11 @@
       "appcleaner"
       "iina"
       "zed"
+      "arc"
       "liberica-jdk21"
       "docker-desktop"
       "tencent-meeting"
+      "mullvad-browser"
     ];
   };
 }
