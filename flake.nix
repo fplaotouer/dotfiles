@@ -4,7 +4,10 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable-small";
     nixpkgs-stable.url = "nixpkgs/nixos-25.11-small";
-    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +24,6 @@
     };
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
   outputs = {
@@ -34,7 +36,6 @@
     flake-utils,
     sops-nix,
     neovim-nightly-overlay,
-    hermes-agent,
   }: let
     lib = nixpkgs.lib // darwin.lib // home-manager.lib;
   in
