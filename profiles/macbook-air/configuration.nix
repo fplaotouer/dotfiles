@@ -37,7 +37,10 @@
       "iina"
       "zed"
       "arc"
-      "liberica-jdk21"
+      {
+        name = "bell-sw/liberica/liberica-jdk21";
+        trusted = true;
+      }
       "docker-desktop"
       "tencent-meeting"
       "mullvad-browser"

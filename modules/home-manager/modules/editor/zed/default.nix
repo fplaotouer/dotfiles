@@ -6,6 +6,7 @@
       vim_mode = true;
       disable_ai = true;
       buffer_font_family = "Iosevka Nerd Font Mono";
+      relative_line_numbers = "wrapped";
       inlay_hints = {
         enabled = true;
       };
@@ -14,14 +15,21 @@
           enabled = true;
         };
       };
-      features = {
-        edit_prediction_provider = "none";
+      edit_prediction = {
+        provider = "none";
       };
       project_panel = {
         hide_hidden = true;
       };
+      tabs = {
+        show_diagnostics = "errors";
+      };
       title_bar = {
         show_sign_in = false;
+      };
+      status_bar = {
+        active_encoding_button = "enabled";
+        line_endings_button = true;
       };
       terminal = {
         font_family = "IosevkaTerm Nerd Font Mono";
