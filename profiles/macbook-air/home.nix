@@ -1,4 +1,5 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = [pkgs.kubernetes-helm pkgs.minikube pkgs.socket-vmnet];
   programs = {
     neovim.defaultEditor = true;
     neovim.lazyVim = true;
@@ -10,6 +11,7 @@
     uv.enable = true;
 
     yt-dlp.enable = true;
+    aria2.enable = true;
     alejandra.enable = true;
     sshpass.enable = true;
     dufs.enable = true;

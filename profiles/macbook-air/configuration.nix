@@ -36,14 +36,13 @@
       "appcleaner"
       "iina"
       "zed"
-      "arc"
       {
         name = "bell-sw/liberica/liberica-jdk21";
         trusted = true;
       }
       "docker-desktop"
       "tencent-meeting"
-      "mullvad-browser"
+      "arc"
     ];
   };
 }
