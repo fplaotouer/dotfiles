@@ -1,4 +1,4 @@
-{lib, ...}: {
+{ lib, ... }: {
   imports = [
     ./../../modules/darwin
     ./hardware-configuration.nix
@@ -6,7 +6,7 @@
   ];
 
   home-manager.users.pangz = {
-    imports = [./home.nix];
+    imports = [ ./home.nix ];
   };
   system.primaryUser = "pangz";
 
@@ -41,7 +41,6 @@
         trusted = true;
       }
       "docker-desktop"
-      "tencent-meeting"
       "arc"
     ];
   };

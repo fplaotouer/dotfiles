@@ -2,7 +2,6 @@
   home.packages = [pkgs.kubernetes-helm pkgs.minikube pkgs.socket-vmnet];
   programs = {
     neovim.defaultEditor = true;
-    neovim.lazyVim = true;
 
     taskwarrior.enable = true;
     hledger.enable = true;
