@@ -4,7 +4,10 @@
 ;
 ; default commodity
 commodity 1,000.00 CNY
+commodity 1,000.00 EUR
+commodity $1,000.00
 D 1,000.00 CNY
+decimal-mark .
 
 ; # Accounts Declarations
 ;
@@ -20,15 +23,29 @@ account liabilities        ; type: Liability
 account equity             ; type: Equity
 account revenues           ; type: Revenue
 account expenses           ; type: Expense
-; or, it can be (these are used less often):
-;     C or Cash (a subtype of Asset, indicating liquid assets for the cashflow report)
-;     V or Conversion (a subtype of Equity, for conversions (see COST).)
-account assets:bank        ; type: Cash
-account assets:cash        ; type: Cash
-account equity:conversion  ; type: Conversion
 
 ; ## Basic Accounts
+account assets:cash        ; type: Cash
+account assets:checking    ; type: Cash
+account assets:savings     ; type: Cash
+account assets:investment
 account assets:receivables
-account liabilities:payables
+account assets:deposits
 account liabilities:creditcard
-account equity:opening/closing balances
+account liabilities:loans
+account liabilities:payables
+account equity:opening-balances
+account equity:closing-balances
+account equity:conversion   ; type: Conversion
+account revenues:salary
+account revenues:gifts
+account revenues:coupons
+account revenues:investment
+account expenses:food
+account expenses:work
+account expenses:gifts
+account expenses:housing
+account expenses:productivity
+account expenses:electronics
+account expenses:transportation
+account expenses:entertainment

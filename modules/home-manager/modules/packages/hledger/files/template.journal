@@ -1,0 +1,4 @@
+; include default journal declarations
+include ~/.hledger/declaration.journal
+
+
