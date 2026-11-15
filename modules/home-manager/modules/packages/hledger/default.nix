@@ -21,7 +21,10 @@ in {
           # hledger-web
           ;
       };
-      file.".hledger/declaration.journal".source = ./declaration.journal;
+      file.".hledger" = {
+        source = ./files;
+        recursive = true;
+      };
       shellAliases = {
         hl = "${pkgs.hledger}/bin/hledger";
       };

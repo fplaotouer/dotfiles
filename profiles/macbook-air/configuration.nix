@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{lib, ...}: {
   imports = [
     ./../../modules/darwin
     ./hardware-configuration.nix
@@ -6,7 +6,7 @@
   ];
 
   home-manager.users.pangz = {
-    imports = [ ./home.nix ];
+    imports = [./home.nix];
   };
   system.primaryUser = "pangz";
 
@@ -26,10 +26,6 @@
     taps = [
       "bell-sw/liberica"
     ];
-    brews = [
-      "gradle"
-      "maven"
-    ];
     casks = [
       "jetbrains-toolbox"
       "the-unarchiver"
@@ -41,7 +37,6 @@
         trusted = true;
       }
       "docker-desktop"
-      "arc"
     ];
   };
 }

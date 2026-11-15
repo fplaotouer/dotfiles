@@ -4,13 +4,7 @@
   pkgs,
   ...
 }: let
-  userCargoConfig = {
-    registry.default = "crates-io";
-    registries.crates-io.protocol = "sparse";
-    net = {
-      git-fetch-with-cli = true;
-    };
-  };
+  userCargoConfig = {};
   settingsFormat = pkgs.formats.toml {};
   settingsFile = settingsFormat.generate "user-cargo-config" userCargoConfig;
 in {
